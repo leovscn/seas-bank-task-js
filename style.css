@@ -34,17 +34,17 @@ header {
 	z-index: 1;
 }
 
-.logo > p {
+.logo>p {
 	font-size: 32px;
 	font-weight: lighter;
 	margin-left: 50px;
 }
 
-.logo > p > span {
+.logo>p>span {
 	font-weight: bold;
 }
 
-header > .logo > img {
+header>.logo>img {
 	width: 50px;
 	height: 50px;
 	padding-bottom: 10px;
@@ -55,7 +55,7 @@ header > .logo > img {
 	align-items: center;
 }
 
-header > nav {
+header>nav {
 	display: flex;
 	justify-content: space-evenly;
 	width: 40%;
@@ -63,18 +63,18 @@ header > nav {
 	font-size: 20px;
 }
 
-header > nav > ul {
+header>nav>ul {
 	width: 300px;
 	display: flex;
 	justify-content: space-around;
 }
 
-header > nav > ul > li {
+header>nav>ul>li {
 	border-left: 1px solid var(--color4);
 	padding-left: 10px;
 }
 
-nav > input {
+nav>input {
 	width: 150px;
 	height: 50px;
 	color: var(--color1);
@@ -85,10 +85,14 @@ nav > input {
 	font-size: 15px;
 }
 
-main > .first > .container1 {
+.first {
+	padding-top: 90px;
+}
+
+main>.first>.container1 {
 	width: auto;
 	height: 300px;
-	background-image: url('/imgs/ocean.jpg');
+	background-image: url('./imgs/ocean.jpg');
 	background-size: cover;
 	background-position: bottom;
 	opacity: 0.9;
@@ -99,7 +103,7 @@ main > .first > .container1 {
 	text-align: center;
 }
 
-.container1 > h2 {
+.container1>h2 {
 	text-shadow: 2px 2px 3px black;
 	font-weight: 400;
 	font-size: 48px;
@@ -133,14 +137,14 @@ main > .first > .container1 {
 	padding-bottom: 50px;
 }
 
-.left-text > p {
+.left-text>p {
 	display: flex;
 	align-items: center;
 	font-weight: lighter;
 	font-size: 25px;
 }
 
-.left-text > i {
+.left-text>i {
 	font-size: 50px;
 	margin-left: 50px;
 	padding: 20px 40px 20px 20px;
@@ -153,7 +157,7 @@ main > .first > .container1 {
 	background-color: var(--color3);
 }
 
-.card-img > img {
+.card-img>img {
 	height: 100%;
 	width: 100%;
 	scale: 1.4;
@@ -166,6 +170,7 @@ main > .first > .container1 {
 	display: flex;
 	height: 600px;
 }
+
 .cards {
 	width: 50%;
 	height: 100%;
@@ -177,7 +182,7 @@ main > .first > .container1 {
 	align-items: center;
 }
 
-.cards > .card {
+.cards>.card {
 	height: 40%;
 	width: 40%;
 	background-color: var(--color6);
@@ -190,9 +195,13 @@ main > .first > .container1 {
 	padding: 20px;
 }
 
-.cards > .card > h3 {
+.cards>.card>h3 {
 	color: var(--color1);
 	margin-bottom: 30px;
+}
+
+.cards>.card>p {
+	color: var(--color1);
 }
 
 .formu {
@@ -202,17 +211,31 @@ main > .first > .container1 {
 	display: flex;
 	align-items: center;
 	justify-content: center;
+
 }
 
-.formu > form {
+form>div>label {
+	color: var(--color1);
+	font-size: x-large;
+	font-weight: bold;
+	margin-bottom: 10px;
+}
+
+form>div>input {
+	width: 500px;
+	height: 32px;
+}
+
+.formu>form {
 	display: flex;
 	flex-direction: column;
 	gap: 50px;
 }
 
-.formu > form > .nome,
+.formu>form>.nome,
 .email,
 .number {
 	display: flex;
 	flex-direction: column;
+
 }
