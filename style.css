@@ -34,17 +34,17 @@ header {
 	z-index: 1;
 }
 
-.logo>p {
+.logo > p {
 	font-size: 32px;
 	font-weight: lighter;
 	margin-left: 50px;
 }
 
-.logo>p>span {
+.logo > p > span {
 	font-weight: bold;
 }
 
-header>.logo>img {
+header > .logo > img {
 	width: 50px;
 	height: 50px;
 	padding-bottom: 10px;
@@ -55,7 +55,7 @@ header>.logo>img {
 	align-items: center;
 }
 
-header>nav {
+header > nav {
 	display: flex;
 	justify-content: space-evenly;
 	width: 40%;
@@ -63,18 +63,18 @@ header>nav {
 	font-size: 20px;
 }
 
-header>nav>ul {
+header > nav > ul {
 	width: 300px;
 	display: flex;
 	justify-content: space-around;
 }
 
-header>nav>ul>li {
+header > nav > ul > li {
 	border-left: 1px solid var(--color4);
 	padding-left: 10px;
 }
 
-nav>input {
+nav > input {
 	width: 150px;
 	height: 50px;
 	color: var(--color1);
@@ -83,13 +83,14 @@ nav>input {
 	border: none;
 	padding: 10px;
 	font-size: 15px;
+	cursor: pointer;
 }
 
 .first {
 	padding-top: 90px;
 }
 
-main>.first>.container1 {
+main > .first > .container1 {
 	width: auto;
 	height: 300px;
 	background-image: url('./imgs/ocean.jpg');
@@ -103,7 +104,7 @@ main>.first>.container1 {
 	text-align: center;
 }
 
-.container1>h2 {
+.container1 > h2 {
 	text-shadow: 2px 2px 3px black;
 	font-weight: 400;
 	font-size: 48px;
@@ -137,14 +138,14 @@ main>.first>.container1 {
 	padding-bottom: 50px;
 }
 
-.left-text>p {
+.left-text > p {
 	display: flex;
 	align-items: center;
 	font-weight: lighter;
 	font-size: 25px;
 }
 
-.left-text>i {
+.left-text > i {
 	font-size: 50px;
 	margin-left: 50px;
 	padding: 20px 40px 20px 20px;
@@ -157,7 +158,7 @@ main>.first>.container1 {
 	background-color: var(--color3);
 }
 
-.card-img>img {
+.card-img > img {
 	height: 100%;
 	width: 100%;
 	scale: 1.4;
@@ -182,7 +183,7 @@ main>.first>.container1 {
 	align-items: center;
 }
 
-.cards>.card {
+.cards > .card {
 	height: 40%;
 	width: 40%;
 	background-color: var(--color6);
@@ -195,12 +196,12 @@ main>.first>.container1 {
 	padding: 20px;
 }
 
-.cards>.card>h3 {
+.cards > .card > h3 {
 	color: var(--color1);
 	margin-bottom: 30px;
 }
 
-.cards>.card>p {
+.cards > .card > p {
 	color: var(--color1);
 }
 
@@ -211,31 +212,67 @@ main>.first>.container1 {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-
 }
 
-form>div>label {
+form {
+	display: flex;
+	align-items: center;
+}
+
+form > div > label {
 	color: var(--color1);
 	font-size: x-large;
 	font-weight: bold;
 	margin-bottom: 10px;
 }
 
-form>div>input {
+form > div > input {
+	border: 1px solid transparent;
+	border-radius: 10px;
 	width: 500px;
 	height: 32px;
+	padding: 18px;
+	background-color: var(--color5);
+	color: black;
+	font-size: 16px;
 }
 
-.formu>form {
+form > div > input:focus {
+	outline: 0;
+	box-shadow: 2px 2px 10px #202b3a;
+}
+
+form > div > input[type='number']::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+}
+form > div > input[type='number'] {
+	-moz-appearance: textfield;
+	appearance: textfield;
+}
+
+form > input[type='submit'] {
+	display: flex;
+	justify-content: center;
+	border-radius: 15px;
+	border: 1px solid transparent;
+	width: 100px;
+	height: 50px;
+	padding: 10px;
+	color: var(--color1);
+	background-color: var(--color5);
+	font-size: 18px;
+	cursor: pointer;
+}
+
+.formu > form {
 	display: flex;
 	flex-direction: column;
 	gap: 50px;
 }
 
-.formu>form>.nome,
+.formu > form > .nome,
 .email,
 .number {
 	display: flex;
 	flex-direction: column;
-
 }
