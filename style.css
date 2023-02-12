@@ -34,17 +34,17 @@ header {
 	z-index: 1;
 }
 
-.logo > p {
+.logo > a > p {
 	font-size: 32px;
 	font-weight: lighter;
 	margin-left: 50px;
 }
 
-.logo > p > span {
+.logo > a > p > span {
 	font-weight: bold;
 }
 
-header > .logo > img {
+header > .logo > a > img {
 	width: 50px;
 	height: 50px;
 	padding-bottom: 10px;
@@ -132,10 +132,6 @@ main > .first > .container1 {
 .left-text {
 	display: flex;
 	align-items: center;
-}
-
-.left-text:nth-child(3) {
-	padding-bottom: 50px;
 }
 
 .left-text > p {
@@ -255,12 +251,13 @@ form > input[type='submit'] {
 	justify-content: center;
 	border-radius: 15px;
 	border: 1px solid transparent;
-	width: 100px;
+	width: 150px;
 	height: 50px;
 	padding: 10px;
 	color: var(--color1);
 	background-color: var(--color5);
 	font-size: 18px;
+	font-weight: bolder;
 	cursor: pointer;
 }
 
@@ -275,4 +272,52 @@ form > input[type='submit'] {
 .number {
 	display: flex;
 	flex-direction: column;
+}
+
+/* ---------- Fourth SECTION ------------*/
+.fourth {
+	background-color: var(--color3);
+	display: flex;
+	height: 500px;
+	justify-content: center;
+	align-items: center;
+	padding: 60px;
+	flex-direction: column;
+	gap: 10px;
+}
+.fourth > h3 {
+	font-size: 40px;
+	margin-bottom: 35px;
+	color: var(--color5);
+	text-shadow: 2px 2px var(--color1);
+}
+
+.fourth > div {
+	width: 75%;
+	background-color: var(--color6);
+	height: 130px;
+	padding: 20px;
+	border-radius: 5px;
+}
+.fourth > div:first-child {
+	margin-top: 50px;
+}
+.fourth > div > details > summary {
+	color: var(--color1);
+}
+.fourth > div > details > summary {
+	font-size: 30px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	cursor: pointer;
+}
+.fourth > div > details > summary > i {
+	color: var(--color1);
+	font-size: 25px;
+	margin-top: 5px;
+}
+.fourth > div > details > p {
+	font-size: 20px;
+	color: var(--color1);
 }
