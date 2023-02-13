@@ -19,10 +19,6 @@
 	color: var(--color5);
 }
 
-body {
-	max-width: 1600px;
-}
-
 header {
 	background-color: var(--color1);
 	width: 100%;
@@ -34,17 +30,17 @@ header {
 	z-index: 1;
 }
 
-.logo>a>p {
+.logo > a > p {
 	font-size: 32px;
 	font-weight: lighter;
 	margin-left: 50px;
 }
 
-.logo>a>p>span {
+.logo > a > p > span {
 	font-weight: bold;
 }
 
-header>.logo>a>img {
+header > .logo > a > img {
 	width: 50px;
 	height: 50px;
 	padding-bottom: 10px;
@@ -55,7 +51,7 @@ header>.logo>a>img {
 	align-items: center;
 }
 
-header>nav {
+header > nav {
 	display: flex;
 	justify-content: space-evenly;
 	width: 40%;
@@ -63,18 +59,18 @@ header>nav {
 	font-size: 20px;
 }
 
-header>nav>ul {
+header > nav > ul {
 	width: 300px;
 	display: flex;
 	justify-content: space-around;
 }
 
-header>nav>ul>li {
+header > nav > ul > li {
 	border-left: 1px solid var(--color4);
 	padding-left: 10px;
 }
 
-nav>input {
+nav > input {
 	width: 150px;
 	height: 50px;
 	color: var(--color1);
@@ -88,9 +84,10 @@ nav>input {
 
 .first {
 	padding-top: 90px;
+	width: 100%;
 }
 
-main>.first>.container1 {
+main > .first > .container1 {
 	width: auto;
 	height: 300px;
 	background-image: url('./imgs/ocean.jpg');
@@ -104,7 +101,7 @@ main>.first>.container1 {
 	text-align: center;
 }
 
-.container1>h2 {
+.container1 > h2 {
 	text-shadow: 2px 2px 3px black;
 	font-weight: 400;
 	font-size: 48px;
@@ -134,14 +131,14 @@ main>.first>.container1 {
 	align-items: center;
 }
 
-.left-text>p {
+.left-text > p {
 	display: flex;
 	align-items: center;
 	font-weight: lighter;
 	font-size: 25px;
 }
 
-.left-text>i {
+.left-text > i {
 	font-size: 50px;
 	margin-left: 50px;
 	padding: 20px 40px 20px 20px;
@@ -154,7 +151,7 @@ main>.first>.container1 {
 	background-color: var(--color3);
 }
 
-.card-img>img {
+.card-img > img {
 	height: 100%;
 	width: 100%;
 	scale: 1.4;
@@ -179,7 +176,7 @@ main>.first>.container1 {
 	align-items: center;
 }
 
-.cards>.card {
+.cards > .card {
 	height: 40%;
 	width: 40%;
 	background-color: var(--color6);
@@ -192,12 +189,12 @@ main>.first>.container1 {
 	padding: 20px;
 }
 
-.cards>.card>h3 {
+.cards > .card > h3 {
 	color: var(--color1);
 	margin-bottom: 30px;
 }
 
-.cards>.card>p {
+.cards > .card > p {
 	color: var(--color1);
 }
 
@@ -215,14 +212,14 @@ form {
 	align-items: center;
 }
 
-form>div>label {
+form > div > label {
 	color: var(--color1);
 	font-size: x-large;
 	font-weight: bold;
 	margin-bottom: 10px;
 }
 
-form>div>input {
+form > div > input {
 	border: 1px solid transparent;
 	border-radius: 10px;
 	width: 500px;
@@ -233,21 +230,21 @@ form>div>input {
 	font-size: 16px;
 }
 
-form>div>input:focus {
+form > div > input:focus {
 	outline: 0;
 	box-shadow: 2px 2px 10px #202b3a;
 }
 
-form>div>input[type='number']::-webkit-inner-spin-button {
+form > div > input[type='number']::-webkit-inner-spin-button {
 	-webkit-appearance: none;
 }
 
-form>div>input[type='number'] {
+form > div > input[type='number'] {
 	-moz-appearance: textfield;
 	appearance: textfield;
 }
 
-form>input[type='submit'] {
+form > input[type='submit'] {
 	display: flex;
 	justify-content: center;
 	border-radius: 15px;
@@ -263,13 +260,13 @@ form>input[type='submit'] {
 	cursor: pointer;
 }
 
-.formu>form {
+.formu > form {
 	display: flex;
 	flex-direction: column;
 	gap: 50px;
 }
 
-.formu>form>.nome,
+.formu > form > .nome,
 .email,
 .number {
 	display: flex;
@@ -288,14 +285,14 @@ form>input[type='submit'] {
 	gap: 10px;
 }
 
-.fourth>h3 {
+.fourth > h3 {
 	font-size: 40px;
 	margin-bottom: 35px;
 	color: var(--color5);
 	text-shadow: 2px 2px var(--color1);
 }
 
-.fourth>div {
+.fourth > div {
 	width: 90%;
 	background-color: var(--color6);
 	height: 130px;
@@ -303,15 +300,15 @@ form>input[type='submit'] {
 	border-radius: 5px;
 }
 
-.fourth>div:first-child {
+.fourth > div:first-child {
 	margin-top: 50px;
 }
 
-.fourth>div>details>summary {
+.fourth > div > details > summary {
 	color: var(--color1);
 }
 
-.fourth>div>details>summary {
+.fourth > div > details > summary {
 	font-size: 30px;
 	display: flex;
 	align-items: center;
@@ -319,13 +316,13 @@ form>input[type='submit'] {
 	cursor: pointer;
 }
 
-.fourth>div>details>summary>i {
+.fourth > div > details > summary > i {
 	color: var(--color1);
 	font-size: 25px;
 	margin-top: 5px;
 }
 
-.fourth>div>details>p {
+.fourth > div > details > p {
 	font-size: 20px;
 	color: var(--color1);
 	max-width: 85%;
