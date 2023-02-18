@@ -13,11 +13,15 @@ body {
   font-family: "Quicksand", sans-serif;
 }
 
+a {
+  color: #fff;
+}
+
 .page-container {
   display: flex;
   flex-direction: column;
   gap: 24px;
-  padding: 64px 12px;
+  padding: 64px 16px;
 }
 
 .page-title-container {
@@ -42,14 +46,199 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 48px;
 }
-
-.plan {
+.plans-container .plan {
   display: flex;
   flex-direction: column;
   border-radius: 8px;
   border: 1.5px solid #4a7686;
   padding: 18px 12px;
+  gap: 12px;
+  width: 100%;
+  max-width: 350px;
+}
+.plans-container .plan .plan-title {
+  text-align: center;
+  font-size: 2rem;
+}
+.plans-container .plan .plan-value {
+  text-align: center;
+  color: #bdbdbd;
+}
+.plans-container .plan .plan-value strong {
+  padding: 0 4px;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #4a7686;
+}
+.plans-container .plan .plan-description {
+  font-weight: 400;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.plans-container .plan .plan-description li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.plans-container .plan .plan-description li::before {
+  content: "";
+  width: 15px;
+  height: 15px;
+  background-color: #4a7686;
+  border-radius: 50%;
+}
+.plans-container .plan .plan-description li p {
+  width: fit-content;
+  text-align: left;
+}
+.plans-container .plan .plan-description li p::first-letter {
+  text-transform: uppercase;
+}
+.plans-container .plan .plan-btn {
+  margin-top: 16px;
+  border: none;
+  outline: none;
+  border-radius: 12px;
+  padding: 12px;
+  text-align: center;
+  background-color: #4a7686;
+}
+.plans-container .plan .plan-btn a {
+  font-size: 1.5rem;
+}
+
+.card-plan.gold {
+  background: linear-gradient(0.79deg, #ebb62d 1.78%, rgba(255, 255, 255, 0) 99.35%, rgba(255, 255, 255, 0) 99.35%);
+}
+
+.card-plan.platinum {
+  color: #fff;
+  background: linear-gradient(0.79deg, #295869 1.78%, rgba(255, 255, 255, 0) 99.35%);
+}
+
+.card-plan.gold .card-number,
+.card-plan.platinum .card-number {
+  color: #fff;
+}
+.card-plan.gold .card-name span:nth-child(2n),
+.card-plan.platinum .card-name span:nth-child(2n) {
+  color: #fff;
+}
+.card-plan.gold .card-footer .card-expiration span:nth-child(2n),
+.card-plan.platinum .card-footer .card-expiration span:nth-child(2n) {
+  color: #fff;
+}
+
+.highlighted-plan {
+  text-align: center;
+  width: 100%;
+  padding: 8px 0;
+  margin-bottom: -5px;
+  background-color: #4a7686;
+  border-radius: 8px 8px 0 0;
+  text-transform: capitalize;
+}
+
+.card-plan {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #fff;
+  background: linear-gradient(0.79deg, #f8f8f8 1.78%, rgba(255, 255, 255, 0) 99.35%, rgba(255, 255, 255, 0) 99.35%);
+}
+.card-plan .card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.card-plan .card-number {
+  padding: 4px 0;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #000000;
+}
+.card-plan .card-name {
+  display: flex;
+  flex-direction: column;
+  color: #000000;
+}
+.card-plan .card-name span:nth-child(1n) {
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+.card-plan .card-name span:nth-child(2n) {
+  font-size: 1rem;
+  font-weight: 500;
+}
+.card-plan .card-footer {
+  display: flex;
+  justify-content: space-between;
+  color: #000000;
+}
+.card-plan .card-footer img {
+  width: 30px;
+}
+.card-plan .card-footer .card-expiration {
+  display: flex;
+  flex-direction: column;
+}
+.card-plan .card-footer .card-expiration span:nth-child(1n) {
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+.card-plan .card-footer .card-expiration span:nth-child(2n) {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+@media (min-width: 998px) and (max-width: 1200px) {
+  html {
+    font-size: 100%;
+  }
+  .plans-container {
+    gap: 24px;
+  }
+  .plans-container .plan {
+    max-width: 300px;
+  }
+  .card-plan .card-number {
+    font-size: 1rem;
+  }
+}
+@media (min-width: 998px) {
+  html {
+    font-size: 115%;
+  }
+  .page-container {
+    padding: 0 16px;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  .page-container .plans-container {
+    display: flex;
+    flex-direction: row;
+  }
+  .page-container .plans-container .plan .plan-btn {
+    padding: 0;
+    transition: all 0.3s;
+  }
+  .page-container .plans-container .plan .plan-btn a {
+    padding: 12px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+  }
+  .page-container .plans-container .plan .plan-btn:hover {
+    background-color: rgba(74, 118, 134, 0.8);
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
