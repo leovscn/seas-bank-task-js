@@ -70,7 +70,7 @@ header > nav > ul > li {
     padding-left: 10px;
 }
 
-nav > input {
+nav > button {
     width: 150px;
     height: 50px;
     color: var(--color1);
@@ -78,8 +78,48 @@ nav > input {
     border-radius: 0.5cm;
     border: none;
     padding: 10px;
+    margin: 0 8px;
     font-size: 15px;
     cursor: pointer;
+    transition: all 0.3s;
+}
+
+nav > button a {
+    width: 100%;
+    height: 100%;
+    color: var(--color1);
+}
+
+.sign-up-btn:hover {
+    background-color: rgba(250, 255, 250, 0.7);
+}
+
+.login-btn {
+    background-color: transparent;
+    border: 1px solid var(--color3);
+    transition: all 0.3s;
+    padding: 0;
+}
+
+nav > button a,
+.login-btn a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.login-btn a {
+    color: var(--color5);
+}
+
+.login-btn:hover {
+    background-color: var(--color5);
+}
+
+.login-btn:hover a {
+    color: #000000;
 }
 
 body {
@@ -215,8 +255,17 @@ main > .first > .container1 > .mobile-only {
     height: 100%;
     background-color: var(--color6);
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
+    gap: 32px;
+}
+
+.formu h2 {
+    color: #000000;
+    font-weight: 700;
+    font-size: 30px;
+    text-align: center;
 }
 
 form {
@@ -275,7 +324,7 @@ form > input[type="submit"] {
 .formu > form {
     display: flex;
     flex-direction: column;
-    gap: 50px;
+    gap: 32px;
 }
 
 .formu > form > .nome,
@@ -348,10 +397,19 @@ form > input[type="submit"] {
     }
     header > nav {
         width: 70%;
-        justify-content: space-around;
+        justify-content: center;
+        gap: 8px;
     }
 
     header > nav > input {
+        display: none;
+    }
+
+    .login-btn {
+        margin: 0;
+    }
+
+    .sign-up-btn {
         display: none;
     }
 
@@ -374,7 +432,7 @@ form > input[type="submit"] {
         border: none;
         font-size: 15px;
         cursor: pointer;
-        background-color: #ffffff54;
+        background-color: #ffffffaf;
     }
 
     .first > .container1 > h2 {
@@ -528,5 +586,23 @@ form > input[type="submit"] {
         font-size: 22px;
         align-items: flex-start;
         font-weight: 600;
+    }
+}
+
+@media (max-width: 500px) {
+    header {
+        padding: 12px 0;
+    }
+    header nav a,
+    nav button a {
+        font-size: 16px;
+    }
+
+    header nav button {
+        width: 100%;
+    }
+
+    .formu h2 {
+        font-size: 24px;
     }
 }
