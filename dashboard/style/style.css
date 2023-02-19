@@ -9,7 +9,8 @@
 
 h1,
 h2,
-h3 {
+h3,
+p {
   margin: 0;
 }
 
@@ -22,6 +23,7 @@ body main .container {
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  padding: 12px 12px 24px 12px;
 }
 body main .card-balance {
   display: flex;
@@ -165,6 +167,61 @@ body main .transactions .transaction-title .line {
 }
 body main .transactions .date span {
   font-weight: 500;
+}
+body main .transactions .transaction-container {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+body main .transactions .transaction-container .transaction {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 0.5px solid #798ba3;
+  padding-bottom: 18px;
+}
+body main .transactions .transaction-container .transaction .info {
+  display: flex;
+  gap: 8px;
+}
+body main .transactions .transaction-container .transaction .info .icon {
+  display: flex;
+  align-items: center;
+  border-radius: 8px;
+  padding: 4px;
+  background-color: #295869;
+}
+body main .transactions .transaction-container .transaction .info .transaction-title-info .header-info {
+  display: flex;
+  gap: 12px;
+}
+body main .transactions .transaction-container .transaction .info .transaction-title-info .header-info strong {
+  font-size: 1rem;
+}
+body main .transactions .transaction-container .transaction .info .transaction-title-info .header-info .transaction-details-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 2px;
+  padding: 2px 4px;
+  background-color: #295869;
+}
+body main .transactions .transaction-container .transaction .info .transaction-title-info p {
+  font-size: 0.625rem;
+  font-weight: 300;
+}
+body main .transactions .transaction-container .transaction .value {
+  display: flex;
+  align-items: center;
+}
+body main .transactions .transaction-container .transaction .value span {
+  display: flex;
+  gap: 12px;
+}
+body main .transactions .transaction-container .transaction .value span .spent {
+  color: #ac4b51;
+}
+body main .transactions .transaction-container .transaction .value span .income {
+  color: #4bac72;
 }
 
 header {
