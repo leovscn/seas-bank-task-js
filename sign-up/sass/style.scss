@@ -169,7 +169,7 @@ $placeholder-color: #ffffff8e;
 						.open-account {
 							display: flex;
 							justify-content: center;
-							input {
+							button {
 								width: 80%;
 								padding: 0.6rem;
 								border-radius: 16px;
@@ -179,8 +179,13 @@ $placeholder-color: #ffffff8e;
 								font-weight: bold;
 								transition: all 0.3s linear;
 								cursor: pointer;
+								a {
+									color: black;
+									display: flex;
+									justify-content: center;
+								}
 							}
-							input:hover {
+							button:hover {
 								color: black;
 								scale: 1.1;
 							}
@@ -215,7 +220,7 @@ $placeholder-color: #ffffff8e;
 								font-size: 1rem;
 							}
 							.open-account {
-								input {
+								button {
 									padding: 1rem;
 									font-size: 1rem;
 								}

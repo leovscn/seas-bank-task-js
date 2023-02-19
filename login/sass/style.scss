@@ -141,6 +141,11 @@ $placeholder-color: #ffffff8e;
 						background-color: #f0f0f0;
 						border: none;
 						transition: all 0.3s linear;
+						a {
+							color: black;
+							display: flex;
+							justify-content: center;
+						}
 					}
 					.submit-btn:hover {
 						background-color: rgba(240, 240, 240, 0.8);
@@ -153,6 +158,12 @@ $placeholder-color: #ffffff8e;
 						background-color: transparent;
 						color: #ffffff;
 						transition: all 0.3s linear;
+
+						a {
+							display: flex;
+							justify-content: center;
+							color: $text-color;
+						}
 					}
 
 					.sign-in-btn:hover {

@@ -1,0 +1,229 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap%27");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+* body {
+  width: 100vw;
+  height: 100vh;
+  font-family: "Quicksand", sans-serif;
+}
+* body img {
+  width: 77px;
+  height: 68px;
+}
+* body .login-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+* body .login-section .image-container {
+  display: none;
+}
+* body .login-section .left-container {
+  background-color: #202b3a;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+* body .login-section .container {
+  width: 75%;
+  display: flex;
+  flex-direction: column;
+}
+* body .login-section .container .welcome {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+}
+* body .login-section .container .welcome img {
+  margin-left: -1rem;
+}
+* body .login-section .container .welcome h3 {
+  color: white;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+* body .login-section .container .inputs {
+  padding-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+* body .login-section .container .inputs input::-webkit-outer-spin-button,
+* body .login-section .container .inputs input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+* body .login-section .container .inputs .input-pattern {
+  background-color: rgba(240, 240, 240, 0.3215686275);
+  font-size: 0.8rem;
+  color: #ffffff;
+  padding: 0.6rem;
+  border: none;
+  border-radius: 16px;
+  text-align: center;
+}
+* body .login-section .container .inputs .input-pattern::placeholder {
+  color: rgba(255, 255, 255, 0.5568627451);
+  text-align: center;
+}
+* body .login-section .container .inputs .input-pattern:focus {
+  outline: none;
+  border: 1px solid rgba(255, 255, 255, 0.774);
+}
+* body .login-section .container .features {
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem 0rem;
+  gap: 0.35rem;
+}
+* body .login-section .container .features .upper {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+* body .login-section .container .features .upper .connect-checkbox {
+  width: 10px;
+  height: 10px;
+}
+* body .login-section .container .features .upper label {
+  color: #ffffff;
+  font-size: 0.85rem;
+  font-weight: 400;
+}
+* body .login-section .container .features .lower a {
+  color: rgba(240, 240, 240, 0.6352941176);
+  font-size: 0.85rem;
+  font-weight: 400;
+}
+* body .login-section .container .features .fingerprint {
+  display: flex;
+  align-self: center;
+  padding: 1rem 0rem;
+}
+* body .login-section .container .buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+* body .login-section .container .buttons .btn-pattern {
+  padding: 0.8rem;
+  border-radius: 16px;
+  cursor: pointer;
+}
+* body .login-section .container .buttons .submit-btn {
+  width: 80%;
+  background-color: #f0f0f0;
+  border: none;
+  transition: all 0.3s linear;
+}
+* body .login-section .container .buttons .submit-btn:hover {
+  background-color: rgba(240, 240, 240, 0.8);
+}
+* body .login-section .container .buttons .sign-in-btn {
+  width: 68%;
+  border: 1px solid #4a7686;
+  background-color: transparent;
+  transition: all 0.3s linear;
+}
+* body .login-section .container .buttons .sign-in-btn a {
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+}
+* body .login-section .container .buttons .sign-in-btn:hover {
+  background-color: rgba(240, 240, 240, 0.3215686275);
+  color: white;
+  scale: 1.1;
+}
+@media screen and (min-width: 992px) {
+  * body body {
+    width: 100vw;
+    height: 100%;
+  }
+  * body img {
+    width: 100%;
+    height: 100%;
+  }
+  * body .login-section {
+    display: flex;
+    justify-content: center;
+  }
+  * body .login-section .left-container {
+    width: 50%;
+    height: 100%;
+    padding: 2rem;
+  }
+  * body .login-section .left-container .container {
+    gap: 0.3rem;
+  }
+  * body .login-section .left-container .container .welcome img {
+    width: 100px;
+    height: 100px;
+  }
+  * body .login-section .left-container .container .welcome h3 {
+    font-size: 2.5rem;
+  }
+  * body .login-section .left-container .container .inputs .input-pattern {
+    padding: 1.1rem;
+    font-size: 1rem;
+  }
+  * body .login-section .left-container .container .features {
+    gap: 0rem;
+  }
+  * body .login-section .left-container .container .features .feat-line {
+    display: flex;
+  }
+  * body .login-section .left-container .container .features .upper {
+    width: 50%;
+  }
+  * body .login-section .left-container .container .features .upper .connect-checkbox {
+    width: 20px;
+    height: 20px;
+  }
+  * body .login-section .left-container .container .features .upper label {
+    font-size: 1rem;
+  }
+  * body .login-section .left-container .container .features .lower {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    width: 50%;
+    text-align: end;
+  }
+  * body .login-section .left-container .container .features .lower a {
+    font-size: 1rem;
+  }
+  * body .login-section .left-container .container .features .fingerprint {
+    display: none;
+  }
+  * body .login-section .left-container .container .buttons .btn-pattern {
+    padding: 1rem;
+    font-size: 1rem;
+    border-radius: 16px;
+    cursor: pointer;
+  }
+  * body .login-section .image-container {
+    padding: 1rem;
+    max-width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
