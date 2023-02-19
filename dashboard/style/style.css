@@ -192,12 +192,15 @@ body main .transactions .transaction-container .transaction .info .icon {
 }
 body main .transactions .transaction-container .transaction .info .transaction-title-info .header-info {
   display: flex;
-  gap: 12px;
+  align-items: center;
+  gap: 6px;
 }
 body main .transactions .transaction-container .transaction .info .transaction-title-info .header-info strong {
   font-size: 1rem;
 }
 body main .transactions .transaction-container .transaction .info .transaction-title-info .header-info .transaction-details-icon {
+  width: 15px;
+  height: 15px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -215,13 +218,16 @@ body main .transactions .transaction-container .transaction .value {
 }
 body main .transactions .transaction-container .transaction .value span {
   display: flex;
-  gap: 12px;
+  gap: 8px;
 }
 body main .transactions .transaction-container .transaction .value span .spent {
   color: #ac4b51;
 }
 body main .transactions .transaction-container .transaction .value span .income {
   color: #4bac72;
+}
+body main .transactions .transaction-container .transaction .value button {
+  display: none;
 }
 
 header {
@@ -256,6 +262,11 @@ header .offcanvas .offcanvas-body .offcanvas-container .offcanvas-links nav {
 header .offcanvas .offcanvas-body .offcanvas-container .offcanvas-links nav ul {
   padding: 0;
   margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
 }
 header .offcanvas .offcanvas-body .offcanvas-container .offcanvas-links nav ul li a {
   text-decoration: none;
@@ -265,6 +276,44 @@ header .offcanvas .offcanvas-body .offcanvas-container .offcanvas-links nav ul l
 }
 header .offcanvas .offcanvas-body .offcanvas-container .offcanvas-links nav ul li .disabled-link {
   color: rgba(255, 255, 255, 0.3);
+}
+
+@media (min-width: 998px) {
+  html {
+    font-size: 120%;
+  }
+  .display-1 {
+    font-size: 3rem;
+  }
+  body main .container {
+    padding: 0 0 48px;
+  }
+  body main .card-balance {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+  body main .card-balance .custom-card-container {
+    min-width: 400px;
+  }
+  body main .card-balance .balance-container .balance-header .balance-line {
+    width: 2rem;
+    height: 4px;
+  }
+  body main .transactions .transaction-container .transaction .info .transaction-title-info .header-info .transaction-details-icon {
+    display: none;
+  }
+  body main .transactions .transaction-container .transaction .value {
+    gap: 48px;
+  }
+  body main .transactions .transaction-container .transaction .value button {
+    display: flex;
+    background-color: #0084a4;
+    font-weight: bold;
+    color: #fff;
+    padding: 6px 12px;
+    border: none;
+    border-radius: 8px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

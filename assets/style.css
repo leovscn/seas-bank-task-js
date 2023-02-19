@@ -435,6 +435,14 @@ form > input[type="submit"] {
         background-color: #ffffffaf;
     }
 
+    main > .first > .container1 > .mobile-only a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #202b3a;
+        font-weight: 700;
+    }
+
     .first > .container1 > h2 {
         font-size: 26px;
     }
@@ -599,6 +607,7 @@ form > input[type="submit"] {
     }
 
     header nav button {
+        max-width: 90px;
         width: 100%;
     }
 

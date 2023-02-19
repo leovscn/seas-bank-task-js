@@ -21,7 +21,7 @@ a {
   display: flex;
   flex-direction: column;
   gap: 24px;
-  padding: 64px 16px;
+  padding: 48px 16px 48px;
 }
 
 .page-title-container {
@@ -107,6 +107,9 @@ a {
   background-color: #4a7686;
 }
 .plans-container .plan .plan-btn a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-size: 1.5rem;
 }
 
@@ -197,6 +200,14 @@ a {
   font-weight: 500;
 }
 
+@media (min-width: 1400px) {
+  .plans-container {
+    gap: 64px;
+  }
+  .plans-container .plan {
+    max-width: 400px;
+  }
+}
 @media (min-width: 998px) and (max-width: 1200px) {
   html {
     font-size: 100%;
@@ -213,7 +224,7 @@ a {
 }
 @media (min-width: 998px) {
   html {
-    font-size: 115%;
+    font-size: 130%;
   }
   .page-container {
     padding: 0 16px;
