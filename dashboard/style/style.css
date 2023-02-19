@@ -18,6 +18,11 @@ body {
   color: #fff;
   font-family: "Quicksand", sans-serif;
 }
+body main .container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
 body main .card-balance {
   display: flex;
   flex-direction: column;
@@ -32,6 +37,10 @@ body main .card-balance .custom-card-container .custom-card-title {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+body main .card-balance .custom-card-container .custom-card-title h2 {
+  font-weight: bold;
+  text-transform: capitalize;
 }
 body main .card-balance .custom-card-container .custom-card-title .span-title {
   border-radius: 16px;
@@ -108,6 +117,10 @@ body main .card-balance .custom-card-container .custom-card .custom-card-plan .c
   font-size: 1rem;
   font-weight: 500;
 }
+body main .card-balance .balance h2 {
+  font-weight: bold;
+  text-transform: capitalize;
+}
 body main .card-balance .balance-container {
   display: flex;
   flex-direction: column;
@@ -130,6 +143,28 @@ body main .card-balance .balance-container .balance-header .balance-line {
 }
 body main .card-balance .balance-container strong {
   font-weight: bold;
+}
+body main .transactions {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+body main .transactions .transaction-title {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+body main .transactions .transaction-title h2 {
+  font-weight: bold;
+  text-transform: capitalize;
+}
+body main .transactions .transaction-title .line {
+  height: 1px;
+  width: 100%;
+  background-color: #798ba3;
+}
+body main .transactions .date span {
+  font-weight: 500;
 }
 
 header {
