@@ -4,174 +4,228 @@
   padding: 0;
   box-sizing: border-box;
   list-style: none;
-  text-decoration: none; }
-  * body {
+  text-decoration: none;
+}
+* body {
+  width: 100vw;
+  height: 100vh;
+  font-family: "Quicksand", sans-serif;
+}
+* body img {
+  width: 77px;
+  height: 68px;
+}
+* body .sign-up-section {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+* body .sign-up-section .image-container {
+  display: none;
+}
+* body .sign-up-section .left-container {
+  width: 100%;
+  height: 100%;
+  background-color: #202b3a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+* body .sign-up-section .left-container .container {
+  width: 75%;
+  display: flex;
+  flex-direction: column;
+}
+* body .sign-up-section .left-container .container .welcome {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.8rem;
+}
+* body .sign-up-section .left-container .container .welcome img {
+  margin-left: -1rem;
+}
+* body .sign-up-section .left-container .container .welcome h3 {
+  color: white;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+* body .sign-up-section .left-container .container form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+* body .sign-up-section .left-container .container form .input-div {
+  padding-top: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+* body .sign-up-section .left-container .container form .inside-input {
+  background-color: rgba(240, 240, 240, 0.3215686275);
+  font-size: 0.8rem;
+  color: #ffffff;
+  padding: 0.6rem;
+  border: none;
+  border-radius: 16px;
+  text-align: center;
+}
+* body .sign-up-section .left-container .container form .inputs-name-email .upper-inputs::placeholder {
+  color: rgba(255, 255, 255, 0.5568627451);
+  text-align: center;
+}
+* body .sign-up-section .left-container .container form .inputs-name-email .upper-inputs:focus {
+  outline: none;
+  border: 1px solid rgba(255, 255, 255, 0.774);
+}
+* body .sign-up-section .left-container .container form .inputs-cpf {
+  display: flex;
+  justify-content: center;
+  gap: 0.3rem;
+}
+* body .sign-up-section .left-container .container form .inputs-cpf input::-webkit-outer-spin-button,
+* body .sign-up-section .left-container .container form .inputs-cpf input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+* body .sign-up-section .left-container .container form .inputs-cpf .addres-cpf-input {
+  width: 50%;
+}
+* body .sign-up-section .left-container .container form .inputs-cpf .addres-cpf-input::placeholder {
+  color: rgba(255, 255, 255, 0.5568627451);
+  text-align: center;
+}
+* body .sign-up-section .left-container .container form .inputs-cpf .addres-cpf-input:focus {
+  outline: none;
+  border: 1px solid rgba(255, 255, 255, 0.774);
+}
+* body .sign-up-section .left-container .container form .gender-number-container {
+  width: 100%;
+  display: flex;
+  color: white;
+  align-items: center;
+  font-size: 0.9rem;
+}
+* body .sign-up-section .left-container .container form .gender-number-container .person-gender {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+* body .sign-up-section .left-container .container form .gender-number-container .person-gender h5 {
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+* body .sign-up-section .left-container .container form .gender-number-container .person-gender input {
+  align-self: flex-start;
+}
+* body .sign-up-section .left-container .container form .gender-number-container .number {
+  width: 50%;
+}
+* body .sign-up-section .left-container .container form .gender-number-container .number input::-webkit-outer-spin-button,
+* body .sign-up-section .left-container .container form .gender-number-container .number input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+* body .sign-up-section .left-container .container form .gender-number-container .number input {
+  width: 100%;
+}
+* body .sign-up-section .left-container .container form .gender-number-container .number input::placeholder {
+  color: rgba(255, 255, 255, 0.5568627451);
+  text-align: center;
+}
+* body .sign-up-section .left-container .container form .gender-number-container .number input:focus {
+  outline: none;
+  border: 1px solid rgba(255, 255, 255, 0.774);
+}
+* body .sign-up-section .left-container .container form .input-password {
+  width: 100%;
+}
+* body .sign-up-section .left-container .container form .input-password .password {
+  width: 100%;
+}
+* body .sign-up-section .left-container .container form .input-password .password::placeholder {
+  color: rgba(255, 255, 255, 0.5568627451);
+  text-align: center;
+}
+* body .sign-up-section .left-container .container form .input-password .password:focus {
+  outline: none;
+  border: 1px solid rgba(255, 255, 255, 0.774);
+}
+* body .sign-up-section .left-container .container form .open-account {
+  display: flex;
+  justify-content: center;
+}
+* body .sign-up-section .left-container .container form .open-account button {
+  width: 80%;
+  height: 2.5rem;
+  border-radius: 16px;
+  border: none;
+  text-align: center;
+  color: black;
+  font-weight: bold;
+  transition: all 0.3s linear;
+  cursor: pointer;
+}
+* body .sign-up-section .left-container .container form .open-account button a {
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+* body .sign-up-section .left-container .container form .open-account button:hover {
+  color: black;
+  scale: 1.1;
+}
+@media screen and (min-width: 992px) {
+  * body body {
     width: 100vw;
-    height: 100vh;
-    font-family: 'Quicksand', sans-serif; }
-    * body img {
-      width: 77px;
-      height: 68px; }
-    * body .sign-up-section {
-      width: 100%;
-      height: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center; }
-      * body .sign-up-section .image-container {
-        display: none; }
-      * body .sign-up-section .left-container {
-        width: 100%;
-        height: 100%;
-        background-color: #202b3a;
-        display: flex;
-        justify-content: center;
-        align-items: center; }
-        * body .sign-up-section .left-container .container {
-          width: 75%;
-          display: flex;
-          flex-direction: column; }
-          * body .sign-up-section .left-container .container .welcome {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 0.8rem; }
-            * body .sign-up-section .left-container .container .welcome img {
-              margin-left: -1rem; }
-            * body .sign-up-section .left-container .container .welcome h3 {
-              color: white;
-              font-size: 1.3rem;
-              font-weight: bold; }
-          * body .sign-up-section .left-container .container form {
-            display: flex;
-            flex-direction: column;
-            gap: 0.7rem; }
-            * body .sign-up-section .left-container .container form .input-div {
-              padding-top: 1.2rem;
-              display: flex;
-              flex-direction: column;
-              gap: 0.5rem; }
-            * body .sign-up-section .left-container .container form .inside-input {
-              background-color: #f0f0f052;
-              font-size: 0.8rem;
-              color: #ffffff;
-              padding: 0.6rem;
-              border: none;
-              border-radius: 16px;
-              text-align: center; }
-            * body .sign-up-section .left-container .container form .inputs-name-email .upper-inputs::placeholder {
-              color: #ffffff8e;
-              text-align: center; }
-            * body .sign-up-section .left-container .container form .inputs-name-email .upper-inputs:focus {
-              outline: none;
-              border: 1px solid rgba(255, 255, 255, 0.774); }
-            * body .sign-up-section .left-container .container form .inputs-cpf {
-              display: flex;
-              justify-content: center;
-              gap: 0.3rem; }
-              * body .sign-up-section .left-container .container form .inputs-cpf input::-webkit-outer-spin-button,
-              * body .sign-up-section .left-container .container form .inputs-cpf input::-webkit-inner-spin-button {
-                -webkit-appearance: none;
-                margin: 0; }
-              * body .sign-up-section .left-container .container form .inputs-cpf .addres-cpf-input {
-                width: 50%; }
-              * body .sign-up-section .left-container .container form .inputs-cpf .addres-cpf-input::placeholder {
-                color: #ffffff8e;
-                text-align: center; }
-              * body .sign-up-section .left-container .container form .inputs-cpf .addres-cpf-input:focus {
-                outline: none;
-                border: 1px solid rgba(255, 255, 255, 0.774); }
-            * body .sign-up-section .left-container .container form .gender-number-container {
-              width: 100%;
-              display: flex;
-              color: white;
-              align-items: center;
-              font-size: 0.9rem; }
-              * body .sign-up-section .left-container .container form .gender-number-container .person-gender {
-                width: 50%;
-                display: flex;
-                flex-direction: column; }
-                * body .sign-up-section .left-container .container form .gender-number-container .person-gender h5 {
-                  font-size: 0.9rem;
-                  font-weight: 600; }
-                * body .sign-up-section .left-container .container form .gender-number-container .person-gender input {
-                  align-self: flex-start; }
-              * body .sign-up-section .left-container .container form .gender-number-container .number {
-                width: 50%; }
-                * body .sign-up-section .left-container .container form .gender-number-container .number input::-webkit-outer-spin-button,
-                * body .sign-up-section .left-container .container form .gender-number-container .number input::-webkit-inner-spin-button {
-                  -webkit-appearance: none;
-                  margin: 0; }
-                * body .sign-up-section .left-container .container form .gender-number-container .number input {
-                  width: 100%; }
-                * body .sign-up-section .left-container .container form .gender-number-container .number input::placeholder {
-                  color: #ffffff8e;
-                  text-align: center; }
-                * body .sign-up-section .left-container .container form .gender-number-container .number input:focus {
-                  outline: none;
-                  border: 1px solid rgba(255, 255, 255, 0.774); }
-            * body .sign-up-section .left-container .container form .input-password {
-              width: 100%; }
-              * body .sign-up-section .left-container .container form .input-password .password {
-                width: 100%; }
-              * body .sign-up-section .left-container .container form .input-password .password::placeholder {
-                color: #ffffff8e;
-                text-align: center; }
-              * body .sign-up-section .left-container .container form .input-password .password:focus {
-                outline: none;
-                border: 1px solid rgba(255, 255, 255, 0.774); }
-            * body .sign-up-section .left-container .container form .open-account {
-              display: flex;
-              justify-content: center; }
-              * body .sign-up-section .left-container .container form .open-account button {
-                width: 80%;
-                padding: 0.6rem;
-                border-radius: 16px;
-                border: none;
-                text-align: center;
-                color: black;
-                font-weight: bold;
-                transition: all 0.3s linear;
-                cursor: pointer; }
-                * body .sign-up-section .left-container .container form .open-account button a {
-                  color: black;
-                  display: flex;
-                  justify-content: center; }
-              * body .sign-up-section .left-container .container form .open-account button:hover {
-                color: black;
-                scale: 1.1; }
-    @media screen and (min-width: 992px) {
-      * body body {
-        width: 100vw;
-        height: 100%; }
-      * body img {
-        width: 100%;
-        height: 100%; }
-      * body .sign-up-section {
-        display: flex; }
-        * body .sign-up-section .left-container {
-          width: 50%;
-          height: 100%;
-          padding: 2rem; }
-          * body .sign-up-section .left-container .container {
-            gap: 0.3rem; }
-            * body .sign-up-section .left-container .container form {
-              gap: 0.7rem; }
-              * body .sign-up-section .left-container .container form .inside-input {
-                padding: 1.1rem;
-                font-size: 1rem; }
-              * body .sign-up-section .left-container .container form .open-account button {
-                padding: 1rem;
-                font-size: 1rem; }
-            * body .sign-up-section .left-container .container .welcome img {
-              width: 100px;
-              height: 100px; }
-            * body .sign-up-section .left-container .container .welcome h3 {
-              font-size: 2.5rem; }
-        * body .sign-up-section .image-container {
-          display: flex;
-          width: 50%;
-          height: 100%;
-          padding: 1rem;
-          align-items: center;
-          justify-content: center; } }
+    height: 100%;
+  }
+  * body img {
+    width: 100%;
+    height: 100%;
+  }
+  * body .sign-up-section {
+    display: flex;
+  }
+  * body .sign-up-section .left-container {
+    width: 50%;
+    height: 100%;
+    padding: 2rem;
+  }
+  * body .sign-up-section .left-container .container {
+    gap: 0.3rem;
+  }
+  * body .sign-up-section .left-container .container form {
+    gap: 0.7rem;
+  }
+  * body .sign-up-section .left-container .container form .inside-input {
+    padding: 1.1rem;
+    font-size: 1rem;
+  }
+  * body .sign-up-section .left-container .container form .open-account button {
+    height: 3.5rem;
+    font-size: 1rem;
+  }
+  * body .sign-up-section .left-container .container .welcome img {
+    width: 100px;
+    height: 100px;
+  }
+  * body .sign-up-section .left-container .container .welcome h3 {
+    font-size: 2.5rem;
+  }
+  * body .sign-up-section .image-container {
+    display: flex;
+    width: 50%;
+    height: 100%;
+    padding: 1rem;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
