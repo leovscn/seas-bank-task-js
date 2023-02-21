@@ -19,7 +19,7 @@ Projeto desenvolvido através do programa vem ser da DBC Company durante o módu
 </p>
 
 <p align="center">
-  <a href="task-03-trilha-front-end.vercel.app" target="_blank"> -> Acesse o deploy do projeto!</a>
+  <a href="https://task-03-trilha-front-end.vercel.app" target="_blank"> -> Acesse o deploy do projeto!</a>
 </p>
 
 <br>
