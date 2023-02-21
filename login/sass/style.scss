@@ -132,7 +132,7 @@ $placeholder-color: #ffffff8e;
 					justify-content: center;
 					gap: 1rem;
 					.btn-pattern {
-						padding: 0.8rem;
+						height: 2.5rem;
 						border-radius: 16px;
 						cursor: pointer;
 					}
@@ -145,6 +145,9 @@ $placeholder-color: #ffffff8e;
 							color: black;
 							display: flex;
 							justify-content: center;
+							align-items: center;
+							height: 100%;
+							width: 100%;
 						}
 					}
 					.submit-btn:hover {
@@ -162,6 +165,9 @@ $placeholder-color: #ffffff8e;
 						a {
 							display: flex;
 							justify-content: center;
+							align-items: center;
+							height: 100%;
+							width: 100%;
 							color: $text-color;
 						}
 					}
@@ -244,7 +250,7 @@ $placeholder-color: #ffffff8e;
 						}
 						.buttons {
 							.btn-pattern {
-								padding: 1rem;
+								height: 3.5rem;
 								font-size: 1rem;
 								border-radius: 16px;
 								cursor: pointer;

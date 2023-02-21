@@ -119,7 +119,7 @@
   gap: 1rem;
 }
 * body .login-section .container .buttons .btn-pattern {
-  padding: 0.8rem;
+  height: 2.5rem;
   border-radius: 16px;
   cursor: pointer;
 }
@@ -129,6 +129,14 @@
   border: none;
   transition: all 0.3s linear;
 }
+* body .login-section .container .buttons .submit-btn a {
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
 * body .login-section .container .buttons .submit-btn:hover {
   background-color: rgba(240, 240, 240, 0.8);
 }
@@ -136,12 +144,16 @@
   width: 68%;
   border: 1px solid #4a7686;
   background-color: transparent;
+  color: #ffffff;
   transition: all 0.3s linear;
 }
 * body .login-section .container .buttons .sign-in-btn a {
-  color: #ffffff;
   display: flex;
   justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  color: #ffffff;
 }
 * body .login-section .container .buttons .sign-in-btn:hover {
   background-color: rgba(240, 240, 240, 0.3215686275);
@@ -210,7 +222,7 @@
     display: none;
   }
   * body .login-section .left-container .container .buttons .btn-pattern {
-    padding: 1rem;
+    height: 3.5rem;
     font-size: 1rem;
     border-radius: 16px;
     cursor: pointer;
