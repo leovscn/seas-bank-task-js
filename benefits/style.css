@@ -1,0 +1,40 @@
+@import url(../assets/style.css);
+.formu > h3 {
+  color: black;
+}
+.cards.conversao {
+  width: 50%;
+}
+#users > p {
+  color: black;
+}
+.usuarios {
+  padding: 1.11rem;
+  box-sizing: content-box;
+}
+select,
+option {
+  all: unset;
+  color: black;
+  height: 2rem;
+  width: 8rem;
+  text-align: center;
+  align-items: center;
+  background-color: var(--color6);
+  border: none;
+  border-radius: 5px;
+}
+.card > p {
+  text-align: center;
+}
+
+.selection {
+  display: flex;
+  position: relative;
+  top: 10%;
+  gap: 2rem;
+}
+
+.cards {
+  width: 100%;
+}

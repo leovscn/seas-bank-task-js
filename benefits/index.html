@@ -1,70 +1,94 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link
-			rel="stylesheet"
-			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
-			integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
-			crossorigin="anonymous"
-			referrerpolicy="no-referrer"
-		/>
-		<link rel="stylesheet" href="../assets/style.css" />
-		<title>SeasBank</title>
-	</head>
-	<body>
-		<header>
-			<div class="logo">
-				<a href="../"
-					><p><span>Seas</span>Bank</p></a
-				>
-				<a href="../"
-					><img
-						src="../imgs/gull-bird-flying-shape-svgrepo-com.svg"
-						alt="Logo do banco SeasBank (ave)"
-				/></a>
-			</div>
-			<nav>
-				<ul>
-					<li><a href="#">Benefícios</a></li>
-					<li><a href="#">Sobre</a></li>
-				</ul>
-				<button class="sign-up-btn">
-					<a href="../plans/">Faça Parte</a>
-				</button>
-				<button class="login-btn">
-					<a href="../login/">Faça login</a>
-				</button>
-				<!-- <input type="submit" value="Faça parte" /> -->
-			</nav>
-		</header>
-		<main>
-			<section class="first">
-				<div class="container1">
-					<h2>Navegue por um mar de possibilidades <br />com SeasBank</h2>
-					<button class="mobile-only">
-						<a href="./plans/">Faça Parte!</a>
-					</button>
-				</div>
-			</section>
-			<section class="second">
-				<div class="textos">
-					<div class="left-text">
-						<i class="fa-regular fa-credit-card"></i>
-						<p>Cartão Internacional: faça compras no exterior aproveitando as melhores taxas de câmbio</p>
-					</div>
-				</div>
-			</section>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+      integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="../assets/style.css" />
+    <link rel="stylesheet" href="style.css" />
 
-			<section class="third">
-				<div class="cards" id="cotacoes">
-					
-				</div>
-			</section>			
-				
-		</main>
-		<script src="../assets/script.js"></script>
-	</body>
+    <title>SeasBank</title>
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <a href="../"
+          ><p><span>Seas</span>Bank</p></a
+        >
+        <a href="../"
+          ><img
+            src="../imgs/gull-bird-flying-shape-svgrepo-com.svg"
+            alt="Logo do banco SeasBank (ave)"
+        /></a>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#">Benefícios</a></li>
+          <li><a href="#">Sobre</a></li>
+        </ul>
+        <button class="sign-up-btn">
+          <a href="../plans/">Faça Parte</a>
+        </button>
+        <button class="login-btn">
+          <a href="../login/">Faça login</a>
+        </button>
+        <!-- <input type="submit" value="Faça parte" /> -->
+      </nav>
+    </header>
+    <main>
+      <section class="first">
+        <div class="container1">
+          <h2>Navegue por um mar de possibilidades <br />com SeasBank</h2>
+          <button class="mobile-only">
+            <a href="./plans/">Faça Parte!</a>
+          </button>
+        </div>
+      </section>
+      <section class="second">
+        <div class="textos">
+          <div class="left-text">
+            <i class="fa-regular fa-credit-card"></i>
+            <p>
+              Cartão Internacional: faça compras no exterior aproveitando as
+              melhores taxas de câmbio
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="third">
+        <div class="cards conversao">
+          <div class="selection">
+            <h3>Pesquisar cotação por moeda:</h3>
+            <select
+              name="moedas"
+              onchange="pegarCotacoes(this.value)"
+              id="moedas"
+            >
+              <option value="USD">Dólares</option>
+              <option value="GBP">Libras</option>
+              <option value="EUR">Euros</option>
+              <option value="ARS">Peso argentino</option>
+            </select>
+          </div>
+          <div class="cards" id="cotacoes"></div>
+        </div>
+        <div class="formu usuarios">
+          <h3>
+            Converse com pessoas que utilizam nosso cartão ao redor do mundo!
+          </h3>
+          <div id="users"></div>
+        </div>
+      </section>
+    </main>
+
+    <script src="../assets/script.js"></script>
+  </body>
 </html>
