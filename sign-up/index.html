@@ -37,12 +37,13 @@
 						</div>
 						<div class="inputs-cpf">
 							<input
-								type="number"
+								type="text"
 								name="CEP"
 								id="cep"
 								maxlength="9" 
 								class="inside-input addres-cpf-input"
-								placeholder="CEP"					
+								placeholder="CEP"
+								onblur="buscaCep()"					
 							/>
 							<input
 								type="text"
