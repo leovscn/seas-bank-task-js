@@ -30,7 +30,7 @@ async function buscaCep() {
 
 const pegarCotacoes = async (select) => {
   document.querySelector("#cotacoes").innerHTML = "";
-  console.log(select);
+
   await fetch(`https://economia.awesomeapi.com.br/last/${select}-BRL`, {
     method: "GET",
     headers: {
