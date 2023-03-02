@@ -1,7 +1,6 @@
 const cep = document.querySelector('#cep');
 
 const showData = (result) => {
-  cep.value = result.cep
   for (let campo in result) {
     if (document.querySelector(`#${campo}`)) {
       document.querySelector(`#${campo}`).value = result[campo]
@@ -14,8 +13,14 @@ async function buscaCep() {
       method: 'GET',
       mode: 'cors',
     }
-
-  const viaCep = await fetch(`https://viacep.com.br/ws/${cepSemTraco}/json/`, options);
-  const data = await viaCep.json();
-  showData(data);
+  try {
+    const viaCep = await fetch(`https://viacep.com.br/ws/${cepSemTraco}/json/`, options);
+    if(viaCep.status !== 200) {
+      console.error('Erro ao conectar com a API');
+    }
+    const data = await viaCep.json();
+    showData(data);
+  } catch (error) {
+    console.error('Erro ao buscar o CEP:', error)
+  }
 }
