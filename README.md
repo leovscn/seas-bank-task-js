@@ -19,7 +19,7 @@ Projeto desenvolvido através do programa vem ser da DBC Company durante o módu
 </p>
 
 <p align="center">
-  <a href="https://seasbank-modulo-js.vercel.app/" target="_blank"> -> Acesse o deploy do projeto!</a>
+  <a href="https://seas-bank-task-js.vercel.app/" target="_blank"> -> Acesse o deploy do projeto!</a>
 </p>
 
 <br>
