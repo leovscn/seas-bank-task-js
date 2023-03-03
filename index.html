@@ -185,34 +185,47 @@
           </details>
         </div>
       </section>
+
       <section id="sobre" class="sobre cards">
         <h2>Comentários:</h2>
-    <div id="post" class="hide conteudo">     
-      
-      <form id="comment-form">
-        <div>
-          <label for="email">Seu e-mail:</label>
+        <div class="comment-inputs">
+          <div class="form-comment">
+            <label for="nome">Seu nome</label>
+            <input
+              type="text"
+              name="nome"
+              id="nome"
+              placeholder="Digite seu nome"
+              required
+            />
+            <label for="email">Seu e-mail:</label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Digite seu e-mail"
+              required
+            />
+          </div>
+          <div class="comment-text">
+            <label for="body">Comentário:</label>
+            <textarea
+              name="body"
+              id="msg"
+              placeholder="Deixe a sua opinião"
+              required
+              maxlength="200"
+              class="textarea-comment"
+            ></textarea>
+          </div>
           <input
-            type="email"
-            name="email"
-            id="email"
-            placeholder="Digite seu e-mail"
-            required
-            class="form-control"
+            type="button"
+            onclick="postaComentario()"
+            value="Enviar"
+            class="comment-button"
           />
         </div>
-        <div>
-          <label for="body">Comentário:</label>
-          <textarea
-            name="body"
-            id="msg"
-            placeholder="Digite seu comentário"
-            required
-            maxlength="240"
-            class="form-control"
-          ></textarea>
-        </div>
-        <input type="button" onclick="postaComentario()" value="Enviar" class="btn btn-danger"/>
+        <div id="comments" class="comments"></div>
       </section>
     </main>
     <script src="./assets/js/script-comments.js"></script>
