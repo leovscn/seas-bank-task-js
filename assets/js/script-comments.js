@@ -67,4 +67,13 @@ const postaComentario = async () => {
       console.log(err);
     });
 };
-//   postaComentario()
+
+const submitNews = document.getElementById('submitNews');
+
+submitNews.addEventListener('click', (event) => {
+  event.preventDefault()
+  alert(`Email cadastrado com sucesso!`);
+  document.getElementById('nameNews').value = ''
+  document.getElementById('emailNews').value = ''
+  document.getElementById('numberNews').value = ''
+})
