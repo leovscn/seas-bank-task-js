@@ -30,17 +30,17 @@ header {
   z-index: 10;
 }
 
-.logo > a > p {
+.logo>a>p {
   font-size: 32px;
   font-weight: lighter;
   margin-left: 50px;
 }
 
-.logo > a > p > span {
+.logo>a>p>span {
   font-weight: bold;
 }
 
-header > .logo > a > img {
+header>.logo>a>img {
   width: 50px;
   height: 50px;
   padding-bottom: 10px;
@@ -51,7 +51,7 @@ header > .logo > a > img {
   align-items: center;
 }
 
-header > nav {
+header>nav {
   display: flex;
   justify-content: space-evenly;
   width: 40%;
@@ -59,18 +59,18 @@ header > nav {
   font-size: 20px;
 }
 
-header > nav > ul {
+header>nav>ul {
   width: 300px;
   display: flex;
   justify-content: space-around;
 }
 
-header > nav > ul > li {
+header>nav>ul>li {
   border-left: 1px solid var(--color4);
   padding-left: 10px;
 }
 
-nav > button {
+nav>button {
   width: 150px;
   height: 50px;
   color: var(--color1);
@@ -84,7 +84,7 @@ nav > button {
   transition: all 0.3s;
 }
 
-nav > button a {
+nav>button a {
   width: 100%;
   height: 100%;
   color: var(--color1);
@@ -101,7 +101,7 @@ nav > button a {
   padding: 0;
 }
 
-nav > button a,
+nav>button a,
 .login-btn a {
   display: flex;
   justify-content: center;
@@ -133,7 +133,7 @@ body {
   width: 100%;
 }
 
-main > .first > .container1 {
+main>.first>.container1 {
   width: 100%;
   height: 300px;
   background-image: url("../imgs/ocean.jpg");
@@ -146,11 +146,12 @@ main > .first > .container1 {
   font-size: 32px;
   text-align: center;
 }
-main > .first > .container1 > .mobile-only {
+
+main>.first>.container1>.mobile-only {
   display: none;
 }
 
-.container1 > h2 {
+.container1>h2 {
   text-shadow: 2px 2px 3px black;
   font-weight: 400;
   font-size: 48px;
@@ -182,14 +183,14 @@ main > .first > .container1 > .mobile-only {
   align-items: center;
 }
 
-.left-text > p {
+.left-text>p {
   display: flex;
   align-items: center;
   font-weight: lighter;
   font-size: 25px;
 }
 
-.left-text > i {
+.left-text>i {
   font-size: 50px;
   margin-left: 50px;
   padding: 20px 40px 20px 20px;
@@ -202,7 +203,7 @@ main > .first > .container1 > .mobile-only {
   background-color: var(--color3);
 }
 
-.card-img > img {
+.card-img>img {
   height: 100%;
   width: 100%;
   scale: 1.4;
@@ -228,7 +229,7 @@ main > .first > .container1 > .mobile-only {
   align-items: center;
 }
 
-.cards > .card {
+.cards>.card {
   height: 40%;
   width: 40%;
   background-color: var(--color6);
@@ -241,12 +242,12 @@ main > .first > .container1 > .mobile-only {
   padding: 20px;
 }
 
-.cards > .card > h3 {
+.cards>.card>h3 {
   color: var(--color1);
   margin-bottom: 30px;
 }
 
-.cards > .card > p {
+.cards>.card>p {
   color: var(--color1);
 }
 
@@ -273,14 +274,14 @@ form {
   align-items: center;
 }
 
-form > div > label {
+form>div>label {
   color: var(--color1);
   font-size: x-large;
   font-weight: bold;
   margin-bottom: 10px;
 }
 
-form > div > input {
+form>div>input {
   border: 1px solid transparent;
   border-radius: 10px;
   width: 500px;
@@ -291,21 +292,21 @@ form > div > input {
   font-size: 16px;
 }
 
-form > div > input:focus {
+form>div>input:focus {
   outline: 0;
   box-shadow: 2px 2px 10px #202b3a;
 }
 
-form > div > input[type="number"]::-webkit-inner-spin-button {
+form>div>input[type="number"]::-webkit-inner-spin-button {
   -webkit-appearance: none;
 }
 
-form > div > input[type="number"] {
+form>div>input[type="number"] {
   -moz-appearance: textfield;
   appearance: textfield;
 }
 
-form > input[type="submit"] {
+form>input[type="submit"] {
   display: flex;
   justify-content: center;
   border-radius: 15px;
@@ -321,13 +322,13 @@ form > input[type="submit"] {
   cursor: pointer;
 }
 
-.formu > form {
+.formu>form {
   display: flex;
   flex-direction: column;
   gap: 32px;
 }
 
-.formu > form > .nome,
+.formu>form>.nome,
 .email,
 .number {
   display: flex;
@@ -346,14 +347,14 @@ form > input[type="submit"] {
   gap: 10px;
 }
 
-.fourth > h3 {
+.fourth>h3 {
   font-size: 40px;
   margin-bottom: 35px;
   color: var(--color5);
   text-shadow: 2px 2px var(--color1);
 }
 
-.fourth > div {
+.fourth>div {
   width: 90%;
   background-color: var(--color6);
   height: 130px;
@@ -361,15 +362,15 @@ form > input[type="submit"] {
   border-radius: 5px;
 }
 
-.fourth > div:first-child {
+.fourth>div:first-child {
   margin-top: 50px;
 }
 
-.fourth > div > details > summary {
+.fourth>div>details>summary {
   color: var(--color1);
 }
 
-.fourth > div > details > summary {
+.fourth>div>details>summary {
   font-size: 30px;
   display: flex;
   align-items: center;
@@ -377,13 +378,13 @@ form > input[type="submit"] {
   cursor: pointer;
 }
 
-.fourth > div > details > summary > i {
+.fourth>div>details>summary>i {
   color: var(--color1);
   font-size: 25px;
   margin-top: 5px;
 }
 
-.fourth > div > details > p {
+.fourth>div>details>p {
   font-size: 20px;
   color: var(--color1);
   max-width: 85%;
@@ -395,13 +396,14 @@ form > input[type="submit"] {
     gap: 10px;
     z-index: 10;
   }
-  header > nav {
+
+  header>nav {
     width: 70%;
     justify-content: center;
     gap: 8px;
   }
 
-  header > nav > input {
+  header>nav>input {
     display: none;
   }
 
@@ -413,16 +415,16 @@ form > input[type="submit"] {
     display: none;
   }
 
-  .logo > a > p {
+  .logo>a>p {
     margin-left: 0px;
   }
 
-  .first > .container1 {
+  .first>.container1 {
     flex-direction: column;
     gap: 15px;
   }
 
-  main > .first > .container1 > .mobile-only {
+  main>.first>.container1>.mobile-only {
     display: block;
     width: 150px;
     height: 50px;
@@ -435,7 +437,7 @@ form > input[type="submit"] {
     background-color: #ffffffaf;
   }
 
-  main > .first > .container1 > .mobile-only a {
+  main>.first>.container1>.mobile-only a {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -443,11 +445,11 @@ form > input[type="submit"] {
     font-weight: 700;
   }
 
-  .first > .container1 > h2 {
+  .first>.container1>h2 {
     font-size: 26px;
   }
 
-  .fourth > div > details > p {
+  .fourth>div>details>p {
     font-size: 16px;
   }
 
@@ -466,12 +468,13 @@ form > input[type="submit"] {
     gap: 12px;
   }
 
-  .left-text > i {
+  .left-text>i {
     font-size: 25px;
     margin-left: 0;
     padding: 0;
   }
-  .left-text > p {
+
+  .left-text>p {
     font-size: 18px;
   }
 
@@ -483,7 +486,7 @@ form > input[type="submit"] {
     position: absolute;
   }
 
-  .card-img > img {
+  .card-img>img {
     position: absolute;
     z-index: 9;
     opacity: 0.2;
@@ -500,7 +503,7 @@ form > input[type="submit"] {
     width: 100%;
   }
 
-  .third > .cards {
+  .third>.cards {
     width: 100%;
   }
 
@@ -508,11 +511,11 @@ form > input[type="submit"] {
     padding: 16px;
   }
 
-  .third > div {
+  .third>div {
     width: 100%;
   }
 
-  .third > .formu {
+  .third>.formu {
     padding: 16px;
   }
 
@@ -520,15 +523,15 @@ form > input[type="submit"] {
     width: 80%;
   }
 
-  form > div > label {
+  form>div>label {
     font-size: 20px;
   }
 
-  form > div > input {
+  form>div>input {
     width: 100%;
   }
 
-  .formu > form > .nome,
+  .formu>form>.nome,
   .email,
   .number {
     width: 100%;
@@ -545,18 +548,18 @@ form > input[type="submit"] {
     width: 100%;
   }
 
-  .cards > .card {
+  .cards>.card {
     height: 100%;
     min-height: 238px;
     justify-content: flex-start;
     padding: 12px;
   }
 
-  .cards > .card > h3 {
+  .cards>.card>h3 {
     margin-bottom: 10px;
   }
 
-  .cards > .card > p {
+  .cards>.card>p {
     width: 100%;
     height: 100%;
     flex-grow: 1;
@@ -570,27 +573,27 @@ form > input[type="submit"] {
     height: 100%;
   }
 
-  .fourth > div {
+  .fourth>div {
     display: flex;
     align-items: center;
     justify-content: flex-start;
     height: 100%;
   }
 
-  .fourth > h3 {
+  .fourth>h3 {
     font-size: 24px;
     margin-bottom: 24px;
   }
 
-  .fourth > div > details {
+  .fourth>div>details {
     width: 100%;
   }
 
-  .fourth > div > details > p {
+  .fourth>div>details>p {
     max-width: 100%;
   }
 
-  .fourth > div > details > summary {
+  .fourth>div>details>summary {
     font-size: 22px;
     align-items: flex-start;
     font-weight: 600;
@@ -601,6 +604,7 @@ form > input[type="submit"] {
   header {
     padding: 12px 0;
   }
+
   header nav a,
   nav button a {
     font-size: 16px;
@@ -625,4 +629,9 @@ form > input[type="submit"] {
 
 .sobre {
   width: 100vw;
+  background-color: darkcyan;
+}
+.sobre .card{
+  text-align: center;
+  margin: auto;
 }

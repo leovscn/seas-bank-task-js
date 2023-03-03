@@ -1,5 +1,5 @@
 const buscaComentarios = async()=>{
-    await fetch('https://my-json-server.typicode.com/leovscn/seas-bank-task-js/comments', {
+    await fetch('https://jsonplaceholder.typicode.com/comments', {
       method: "GET",
       headers: {
         "Content-Type": "application/json"
@@ -9,8 +9,17 @@ const buscaComentarios = async()=>{
         throw new Error(`HTML response: ${response.status}`)
       }
       return response.json()
-    }).then(json => {
-      console.log(json)
+    }).then(data => {
+        for(let i = 0;i<4;i++){
+            let comentario = document.createElement('div')
+            comentario.classList.add('card')
+            comentario.innerHTML = `
+            <h3>${data[i].name} - ${data[i].email}</h3>
+    
+            <p>${data[i].body}</p>
+            `
+            document.getElementById('sobre').appendChild(comentario)
+        }
     }).catch(err=>{
       console.log(err)
     })
@@ -18,15 +27,20 @@ const buscaComentarios = async()=>{
   buscaComentarios()
   
   const postaComentario = async ()=>{
-    await fetch('https://my-json-server.typicode.com/leovscn/seas-bank-task-js/comments',{
+    const email = document.getElementById('email').value
+    const msg = document.getElementById('msg').value
+    const nome = document.getElementById('nome').value
+    await fetch('https://jsonplaceholder.typicode.com/comments',{
       method: 'POST',
       headers:{
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        id:3,
-        body: 'third comment',
-        postId: 1
+        postId: 1,
+        id: 1,
+        name: `${nome}`,
+        email: `${email}`,
+        body: `${msg}`
       })
     }).then(response =>{
       if(!response.ok){
@@ -34,10 +48,18 @@ const buscaComentarios = async()=>{
       }
       return response.json()
     }).then(data =>{
+        let comentario = document.createElement('div')
+        comentario.classList.add('card')
+        comentario.innerHTML = `
+        <h3>${data.name} - ${data.email}</h3>
+
+        <p>${data.body}</p>
+        `
+        document.getElementById('sobre').appendChild(comentario)
       console.log(data)
     }).catch(err =>{
       console.log(err)
     })
   }
-  postaComentario()
+//   postaComentario()
   
