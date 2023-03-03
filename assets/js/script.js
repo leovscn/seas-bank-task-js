@@ -7,7 +7,7 @@ const showData = (result) => {
   }
 };
 async function buscaCep() {
-  let cepSemTraco = cep.value.replaceAll("-", "");
+  let cepSemTraco = cep.value.replace(/\D/g, '');
   const options = {
     method: "GET",
     mode: "cors",
@@ -90,3 +90,4 @@ async function listarUsuarios() {
     });
 }
 listarUsuarios();
+

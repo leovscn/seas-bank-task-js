@@ -28,14 +28,14 @@
       </div>
       <nav>
         <ul>
-          <li><a href="./benefits/">Benefícios</a></li>
-          <li><a href="#">Sobre</a></li>
+          <li><a href="./benefits/index.html">Benefícios</a></li>
+          <li><a href="#sobre">Sobre</a></li>
         </ul>
         <button class="sign-up-btn">
-          <a href="./plans/">Faça Parte</a>
+          <a href="./plans/index.html">Faça Parte</a>
         </button>
         <button class="login-btn">
-          <a href="./login/">Faça login</a>
+          <a href="./login/index.html">Faça login</a>
         </button>
         <!-- <input type="submit" value="Faça parte" /> -->
       </nav>
@@ -45,7 +45,7 @@
         <div class="container1">
           <h2>Navegue por um mar de possibilidades <br />com SeasBank</h2>
           <button class="mobile-only">
-            <a href="./plans/">Faça Parte!</a>
+            <a href="./plans/index.html">Faça Parte!</a>
           </button>
         </div>
       </section>
@@ -113,8 +113,8 @@
               <label for="name">Informe seu nome:</label>
               <input
                 type="text"
-                name="name"
-                id=""
+                name=""
+                id="nameNews"
                 placeholder="Digite seu nome"
               />
             </div>
@@ -123,8 +123,8 @@
               <label for="email">Informe seu email:</label>
               <input
                 type="email"
-                name="email"
-                id=""
+                name=""
+                id="emailNews"
                 placeholder="Digite seu email"
               />
             </div>
@@ -133,13 +133,13 @@
               <label for="number">Informe seu número:</label>
               <input
                 type="number"
-                name="number"
-                id=""
+                name=""
+                id="numberNews"
                 placeholder="(ddd) xxxx-xxxx"
               />
             </div>
 
-            <input type="submit" value="Inscreva-se!" />
+            <input type="submit" id="submitNews" value="Inscreva-se!" />
           </form>
         </div>
       </section>
@@ -185,7 +185,49 @@
           </details>
         </div>
       </section>
-      <section id="sobre" class="sobre"></section>
+
+      <section id="sobre" class="sobre cards">
+        <h2>Comentários:</h2>
+        <div class="comment-inputs">
+          <div class="form-comment">
+            <label for="nome">Seu nome</label>
+            <input
+              type="text"
+              name="nome"
+              id="nome"
+              placeholder="Digite seu nome"
+              required
+            />
+            <label for="email">Seu e-mail:</label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Digite seu e-mail"
+              required
+            />
+          </div>
+          <div class="comment-text">
+            <label for="body">Comentário:</label>
+            <textarea
+              name="body"
+              id="msg"
+              placeholder="Deixe a sua opinião"
+              required
+              maxlength="200"
+              class="textarea-comment"
+            ></textarea>
+          </div>
+          <input
+            type="button"
+            onclick="postaComentario()"
+            value="Enviar"
+            class="comment-button"
+          />
+        </div>
+        <div id="comments" class="comments"></div>
+      </section>
     </main>
+    <script src="./assets/js/script-comments.js"></script>
   </body>
 </html>
