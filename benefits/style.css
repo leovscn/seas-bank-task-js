@@ -57,20 +57,10 @@
   height: 5rem;
   box-shadow: 2px 2px 2px black;
 }
+
 .submit-comment {
   all: unset;
-  position: absolute;
-  bottom: 0%;
-  right: 50%;
-  width: 15rem;
-  height: 3rem;
-  background-color: var(--color1);
-}
-.submit-comment {
-  all: unset;
-  position: absolute;
-  bottom: -5%;
-  right: 43%;
+  align-self: center;
   width: 15rem;
   height: 3rem;
   background-color: var(--color5);
@@ -82,7 +72,7 @@
   box-shadow: 2px 2px 2px black;
 }
 .submit-comment:hover {
-  background-color: var(--color3);
+  background-color: var(--color1);
   color: var(--color5);
 }
 select,
