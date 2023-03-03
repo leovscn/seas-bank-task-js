@@ -186,7 +186,33 @@
         </div>
       </section>
       <section id="sobre" class="sobre cards">
-
+        <h2>Comentários:</h2>
+    <div id="post" class="hide conteudo">     
+      
+      <form id="comment-form">
+        <div>
+          <label for="email">Seu e-mail:</label>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="Digite seu e-mail"
+            required
+            class="form-control"
+          />
+        </div>
+        <div>
+          <label for="body">Comentário:</label>
+          <textarea
+            name="body"
+            id="msg"
+            placeholder="Digite seu comentário"
+            required
+            maxlength="240"
+            class="form-control"
+          ></textarea>
+        </div>
+        <input type="button" onclick="postaComentario()" value="Enviar" class="btn btn-danger"/>
       </section>
     </main>
     <script src="./assets/js/script-comments.js"></script>

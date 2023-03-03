@@ -29,7 +29,7 @@ const buscaComentarios = async()=>{
   const postaComentario = async ()=>{
     const email = document.getElementById('email').value
     const msg = document.getElementById('msg').value
-    const nome = document.getElementById('nome').value
+    // const nome = document.getElementById('nome').value
     await fetch('https://jsonplaceholder.typicode.com/comments',{
       method: 'POST',
       headers:{
@@ -38,7 +38,7 @@ const buscaComentarios = async()=>{
       body: JSON.stringify({
         postId: 1,
         id: 1,
-        name: `${nome}`,
+        name: 'nome',
         email: `${email}`,
         body: `${msg}`
       })
