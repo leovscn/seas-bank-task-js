@@ -32,30 +32,41 @@
   align-items: flex-start;
   justify-content: flex-start;
   background-color: var(--color5);
-  border: none;
+  border: 1px solid transparent;
   border-radius: 10px;
   padding-left: 1rem;
   color: var(--color1);
   box-shadow: 2px 2px 2px black;
+}
+.contact-form > input:focus {
+  outline: 0;
+  box-shadow: 2px 2px 10px #202b3a;
+}
+.contact-form > h3 {
+  padding-bottom: 1rem;
 }
 .contact-text {
   display: flex;
   align-items: flex-start;
   flex-direction: column;
 }
-.contact-text > label {
+.contact-form label {
   margin-bottom: 1rem;
 }
 .contact-text > textarea {
   all: unset;
   background-color: var(--color5);
-  border: none;
+  border: 1px solid transparent;
   border-radius: 10px;
   color: var(--color1);
   padding: 1rem;
   width: 20rem;
   height: 5rem;
   box-shadow: 2px 2px 2px black;
+}
+.contact-text > textarea:focus {
+  outline: 0;
+  box-shadow: 2px 2px 10px #202b3a;
 }
 
 .submit-comment {
@@ -70,6 +81,7 @@
   border: none;
   border-radius: 10px;
   box-shadow: 2px 2px 2px black;
+  cursor: pointer;
 }
 .submit-comment:hover {
   background-color: var(--color1);
