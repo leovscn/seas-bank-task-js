@@ -1,3 +1,4 @@
+const regexEmail = /\S+@\S+\.\S+/gi
 const buscaComentarios = async () => {
   await fetch("https://jsonplaceholder.typicode.com/comments", {
     method: "GET",
@@ -33,22 +34,29 @@ const buscaComentarios = async () => {
 buscaComentarios();
 
 const postaComentario = async () => {
-  const email = document.getElementById("email").value;
-  const msg = document.getElementById("msg").value;
-  const nome = document.getElementById("nome").value;
-  await fetch("https://jsonplaceholder.typicode.com/comments", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({
-      postId: 1,
-      id: 1,
-      name: `${nome}`,
-      email: `${email}`,
-      body: `${msg}`,
-    }),
-  })
+  try {
+    
+    const email = document.getElementById("email").value;
+    const msg = document.getElementById("msg").value;
+    const nome = document.getElementById("nome").value;
+    if(!regexEmail.test(email)){
+      throw new Error('Email inválido')
+    }else if(msg.trim()==""||nome.trim()==""){
+      throw new Error('A mensagem e o nome não podem estar vazios.')
+    }
+    await fetch("https://jsonplaceholder.typicode.com/comments", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        postId: 1,
+        id: 1,
+        name: `${nome}`,
+        email: `${email}`,
+        body: `${msg}`,
+      }),
+    })
     .then((response) => {
       if (!response.ok) {
         throw new Error(`HTML response: ${response.status}`);
@@ -68,9 +76,9 @@ const postaComentario = async () => {
       document.getElementById("comments").appendChild(comentario);
       console.log(data);
     })
-    .catch((err) => {
-      console.log(err);
-    });
+  } catch (error) {
+    console.log(error);
+  }
 };
 
 const submitNews = document.getElementById("submitNews");
