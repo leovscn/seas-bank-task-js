@@ -16,8 +16,11 @@ const buscaComentarios = async () => {
         let comentario = document.createElement("div");
         comentario.classList.add("card");
         comentario.innerHTML = `
+            <div class="comment-header">
+            <i class="fa-solid fa-user"></i>
             <h3>${data[i].name} - ${data[i].email}</h3>
-    
+            </div>
+
             <p>${data[i].body}</p>
             `;
         document.getElementById("comments").appendChild(comentario);
@@ -56,8 +59,10 @@ const postaComentario = async () => {
       let comentario = document.createElement("div");
       comentario.classList.add("card");
       comentario.innerHTML = `
+      <div class="comment-header">
+      <i class="fa-solid fa-user"></i>
         <h3>${data.name} - ${data.email}</h3>
-
+        </div>
         <p>${data.body}</p>
         `;
       document.getElementById("comments").appendChild(comentario);
@@ -68,12 +73,12 @@ const postaComentario = async () => {
     });
 };
 
-const submitNews = document.getElementById('submitNews');
+const submitNews = document.getElementById("submitNews");
 
-submitNews.addEventListener('click', (event) => {
-  event.preventDefault()
+submitNews.addEventListener("click", (event) => {
+  event.preventDefault();
   alert(`Email cadastrado com sucesso!`);
-  document.getElementById('nameNews').value = ''
-  document.getElementById('emailNews').value = ''
-  document.getElementById('numberNews').value = ''
-})
+  document.getElementById("nameNews").value = "";
+  document.getElementById("emailNews").value = "";
+  document.getElementById("numberNews").value = "";
+});
