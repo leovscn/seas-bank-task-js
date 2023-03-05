@@ -7,7 +7,7 @@ const showData = (result) => {
   }
 };
 async function buscaCep() {
-  let cepSemTraco = cep.value.replace(/\D/g, '');
+  let cepSemTraco = cep.value.replace(/\D/g, "");
   const options = {
     method: "GET",
     mode: "cors",
@@ -85,9 +85,11 @@ async function listarUsuarios() {
       users.forEach((user) => {
         document.getElementById(
           "users"
-        ).innerHTML += `<br> <p> <b style="color: black">Nome:</b> ${user.name}, <b style="color: black">Email:</b> ${user.email}, <b style="color: black">Cidade:</b> ${user.address.city} </p> <hr>`;
+        ).innerHTML += `<div class="card">  <p> <b style="color: black">Nome:</b> 
+        ${user.name},<br> <b style="color: black">Cidade:</b> 
+        ${user.address.city} <br><b style="color: black">Email:</b> 
+        ${user.email} </p></div>`;
       });
     });
 }
 listarUsuarios();
-
