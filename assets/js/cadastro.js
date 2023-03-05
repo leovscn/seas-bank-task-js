@@ -10,6 +10,7 @@ function validateFields() {
   
   if (fieldsCompleted) {
     createUser()
+    window.location.href = "../login/index.html"
   } else {
     alert("Por favor, preencha todos os campos obrigatórios.");
   }
