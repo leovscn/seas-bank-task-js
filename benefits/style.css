@@ -8,8 +8,8 @@
   width: 100%;
 }
 .cards.conversao {
-  width: 100%;
-  height: auto;
+  width: 50%;
+
   padding: 4rem;
 }
 .container {
@@ -163,7 +163,32 @@ option {
 
   padding: 1rem;
 }
+.selection > h3 {
+  text-shadow: 1px 1px 1px var(--color1);
+}
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  background: var(--color2);
+  height: 30rem;
+}
+.li-benefits {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+.li-benefits > ul {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  font-size: 20px;
+  font-weight: bold;
+}
+.li-benefits > ul > li {
+  border-left: 2px solid var(--color4);
 
+  padding-left: 1rem;
+}
 @media (max-width: 700px) {
   .comment-inputs {
     display: flex;
@@ -217,12 +242,37 @@ option {
     height: auto;
     font-size: 14px;
   }
+  .flex-row {
+    display: flex;
+    flex-direction: column;
+    background: var(--color2);
+    height: 60%;
+  }
 }
 @media (max-width: 1200px) {
   .cards > .card > p {
     width: 100%;
-    height: 100%;
+    height: auto;
     flex-grow: 0;
     overflow-wrap: break-word;
   }
+  .cards.conversao {
+    width: 100%;
+    padding: 4rem;
+  }
+  .flex-row {
+    display: flex;
+    flex-direction: column;
+    background: var(--color2);
+    height: 60%;
+  }
+}
+.li-benefits > ul > li {
+  border-left: 2px solid var(--color4);
+  font-size: 15px;
+}
+.li-benefits > ul {
+  font-size: 15px;
+  padding-left: 1rem;
+  padding-bottom: 1rem;
 }

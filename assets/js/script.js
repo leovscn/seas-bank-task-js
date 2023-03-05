@@ -1,8 +1,7 @@
 // COTAÇÕES
 
-const pegarCotacoes = async (select) => {
+async function pegarCotacoes(select) {
   document.querySelector("#cotacoes").innerHTML = "";
-
   await fetch(`https://economia.awesomeapi.com.br/last/${select}-BRL`, {
     method: "GET",
     headers: {
@@ -38,7 +37,8 @@ const pegarCotacoes = async (select) => {
     .catch((err) => {
       cotacoes.innerHTML = err;
     });
-};
+}
+pegarCotacoes("USD");
 
 async function listarUsuarios() {
   await fetch("https://jsonplaceholder.typicode.com/users", {
