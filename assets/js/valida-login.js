@@ -25,7 +25,7 @@ const validaLogin = async () => {
           ) {
             userFound = true;
             alertNotRepeat = true;
-            window.location.assign("../dashboard/index.html"); 
+            window.location.assign("../dashboard/index.html?id=" + element.id);
           }
         });
         if (!userFound && !alertNotRepeat) {
@@ -37,3 +37,33 @@ const validaLogin = async () => {
     console.log(error);
   }
 };
+
+async function setUserName() {
+  const urlParams = new URLSearchParams(window.location.search);
+  let userId = urlParams.get("id");
+  console.log(userId);
+  try {
+    await fetch("http://localhost:3000/usuarios", {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    })
+      .then((res) => {
+        if (!res.ok) {
+          throw new Error(`HTML Status :${res.status}`);
+        }
+        return res.json();
+      })
+      .then((json) => {
+        json.forEach((element) => {
+          if (userId == element.id) {
+            document.getElementById("userName").innerHTML = element.nome;
+          }
+        });
+      });
+  } catch (error) {
+    console.log(error);
+  }
+}
+setUserName();
