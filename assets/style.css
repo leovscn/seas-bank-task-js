@@ -658,7 +658,7 @@ form > input[type="submit"] {
 .form-comment {
   display: flex;
   flex-direction: column;
-  row-gap: 1rem;
+  row-gap: 0.9rem;
 }
 .comment-inputs {
   display: flex;
@@ -674,7 +674,7 @@ form > input[type="submit"] {
   border-radius: 10px;
   background-color: var(--color5);
   box-shadow: 2px 2px 2px #202b3a;
-  padding-left: 1rem;
+  padding-left: 0.9rem;
   color: #202b3a;
 }
 .form-comment > input:focus {
