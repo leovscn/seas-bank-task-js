@@ -19,10 +19,10 @@ const validaLogin = async () => {
         json.forEach((element) => {
           console.log(element);
           if (
-            element.numeroDaConta === loginUser.value &&
+            element.email === loginUser.value &&
             element.senha === passwordUser.value
           ) {
-            window.location.assign("../dashboard/index.html");
+            window.location.assign("../dashboard/index.html"); 
           } else {
             console.log("Dados incorretos");
           }
@@ -36,28 +36,26 @@ const validaLogin = async () => {
   }
 };
 
-async function postUsers() {
-  await fetch("http://localhost:3000/usuarios", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({
-      id: 4,
-      nome: "Usuário da API 2",
-      email: "admin2@admin.com",
-      senha: "senha123",
-      numeroDaConta: "2131435",
-    }),
-  })
-    .then((response) => {
-      if (!response.ok) {
-        throw new Error(`HTML Error: ${response.status}`);
-      }
-      return response.json();
-    })
-    .then((users) => {
-      console.log("ok");
-    });
-}
-postUsers();
+// async function postUsers() {
+//   await fetch("http://localhost:3000/usuarios", {
+//     method: "POST",
+//     headers: {
+//       "Content-Type": "application/json",
+//     },
+//     body: JSON.stringify({
+//       nome: "Usuário da API 2",
+//       email: "admin2@admin.com",
+//       senha: "senha123",
+//       numeroDaConta: "2131435",
+//     }),
+//   })
+//     .then((response) => {
+//       if (!response.ok) {
+//         throw new Error(`HTML Error: ${response.status}`);
+//       }
+//       return response.json();
+//     })
+//     .then((users) => {
+//       console.log("ok");
+//     });
+// }
