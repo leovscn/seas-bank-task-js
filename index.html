@@ -42,7 +42,7 @@
         <button class="login-btn">
           <a href="./login/index.html">Faça login</a>
         </button>
-        <!-- <input type="submit" value="Faça parte" /> -->
+
       </nav>
     </header>
     <main>
@@ -113,7 +113,7 @@
 
         <div class="formu">
           <h2>Fique por dentro das novidades!</h2>
-          <form>
+          <form id="seasNews">
             <div class="nome">
               <label for="name">Informe seu nome:</label>
               <input
@@ -121,6 +121,7 @@
                 name=""
                 id="nameNews"
                 placeholder="Digite seu nome"
+                required
               />
             </div>
 
@@ -144,7 +145,7 @@
               />
             </div>
 
-            <input type="submit" id="submitNews" value="Inscreva-se!" />
+            <input type="submit" form="seasNews" id="submitNews" value="Inscreva-se!" />
           </form>
         </div>
       </section>
