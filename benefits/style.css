@@ -266,13 +266,13 @@ option {
     background: var(--color2);
     height: 60%;
   }
-}
-.li-benefits > ul > li {
-  border-left: 2px solid var(--color4);
-  font-size: 15px;
-}
-.li-benefits > ul {
-  font-size: 15px;
-  padding-left: 1rem;
-  padding-bottom: 1rem;
+  .li-benefits > ul > li {
+    border-left: 2px solid var(--color4);
+    font-size: 15px;
+  }
+  .li-benefits > ul {
+    font-size: 15px;
+    padding-left: 1rem;
+    padding-bottom: 1rem;
+  }
 }
