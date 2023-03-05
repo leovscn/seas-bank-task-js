@@ -27,6 +27,12 @@
       "email": "admin2@admin.com",
       "senha": "senha123",
       "numeroDaConta": "2131435"
+    },
+    {
+      "nome": "kellvin",
+      "email": "kellvin.coreria@gamil.com",
+      "senha": "123421423",
+      "id": 5
     }
   ]
 }

@@ -1,18 +1,36 @@
-let userName = document.getElementById('nameUser').value
-let emailUser = document.getElementById('emailUser').value
-let passwordUser = document.getElementById('passwordUser').value
+function validateFields() {
+  let fields = document.querySelectorAll('input[required]');
+  let fieldsCompleted = true;
+  
+  fields.forEach(function(field) {
+    if (field.value === "") {
+      fieldsCompleted = false;
+    }
+  });
+  
+  if (fieldsCompleted) {
+    createUser()
+  } else {
+    alert("Por favor, preencha todos os campos obrigatórios.");
+  }
+}
 
-async function postUsers() {
+
+async function createUser() {
+  let nameUser = document.getElementById('nameUser').value
+  let emailUser = document.getElementById('emailUser').value
+  let passwordUser = document.getElementById('passwordUser').value
+
+  console.log(nameUser);
   await fetch("http://localhost:3000/usuarios", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
     },
     body: JSON.stringify({
-      nome: "Usuário da API 2",
-      email: "admin2@admin.com",
-      senha: "senha123",
-      numeroDaConta: "2131435",
+      nome: `${nameUser}`,
+      email: `${emailUser}`,
+      senha: `${passwordUser}`,
     }),
   })
     .then((response) => {
@@ -23,5 +41,6 @@ async function postUsers() {
     })
     .then((users) => {
       console.log("ok");
-    });
+    })
+    
 }

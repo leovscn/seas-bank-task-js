@@ -26,6 +26,7 @@
                 id="nameUser"
                 class="upper-inputs inside-input input-placeholder input-focus"
                 placeholder="Informe seu nome"
+                required
               />
               <input
                 type="email"
@@ -33,6 +34,7 @@
                 id="emailUser"
                 class="upper-inputs inside-input .input-placeholder input-focus"
                 placeholder="Digite seu email"
+                required
               />
             </div>
             <div class="inputs-cpf">
@@ -44,6 +46,7 @@
                 class="inside-input addres-cpf-input"
                 placeholder="CEP"
                 onblur="buscaCep()"
+                required
               />
               <input
                 type="text"
@@ -114,11 +117,12 @@
                 id="passwordUser"
                 placeholder="Senha"
                 class="password inside-input .input-placeholder input-focus"
+                required
               />
             </div>
             <div class="open-account">
-              <button onclick="createUser()">
-                <a href="../dashboard/index.html" class="open">Abrir conta</a>
+              <button type="button" onclick="validateFields()">
+                <a href="../login/index.html" class="open">Abrir conta</a>
               </button>
             </div>
           </form>
