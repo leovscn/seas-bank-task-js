@@ -1,3 +1,33 @@
+const cep = document.querySelector("#cep");
+const showData = (result) => {
+  for (let campo in result) {
+    if (document.querySelector(`#${campo}`)) {
+      document.querySelector(`#${campo}`).value = result[campo];
+    }
+  }
+};
+async function buscaCep() {
+  let cepSemTraco = cep.value.replace(/\D/g, '');
+  const options = {
+    method: "GET",
+    mode: "cors",
+  };
+  try {
+    const viaCep = await fetch(
+      `https://viacep.com.br/ws/${cepSemTraco}/json/`,
+      options
+    );
+    if (viaCep.status !== 200) {
+      throw new Error(`HTML Error : ${viaCep.status}`);
+    }
+    const data = await viaCep.json();
+    showData(data);
+  } catch (error) {
+    console.error("Erro ao buscar o CEP:", error);
+  }
+}
+
+
 function validateFields() {
   let fields = document.querySelectorAll('input[required]');
   let fieldsCompleted = true;
@@ -22,7 +52,6 @@ async function createUser() {
   let emailUser = document.getElementById('emailUser').value
   let passwordUser = document.getElementById('passwordUser').value
 
-  console.log(nameUser);
   await fetch("http://localhost:3000/usuarios", {
     method: "POST",
     headers: {
