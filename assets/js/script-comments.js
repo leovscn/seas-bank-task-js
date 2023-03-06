@@ -1,3 +1,4 @@
+const regexEmail = /\S+@\S+\.\S+/gi
 const buscaComentarios = async () => {
   await fetch("https://jsonplaceholder.typicode.com/comments", {
     method: "GET",
@@ -16,8 +17,11 @@ const buscaComentarios = async () => {
         let comentario = document.createElement("div");
         comentario.classList.add("card");
         comentario.innerHTML = `
+            <div class="comment-header">
+            <i class="fa-solid fa-user"></i>
             <h3>${data[i].name} - ${data[i].email}</h3>
-    
+            </div>
+
             <p>${data[i].body}</p>
             `;
         document.getElementById("comments").appendChild(comentario);
@@ -30,22 +34,29 @@ const buscaComentarios = async () => {
 buscaComentarios();
 
 const postaComentario = async () => {
-  const email = document.getElementById("email").value;
-  const msg = document.getElementById("msg").value;
-  const nome = document.getElementById("nome").value;
-  await fetch("https://jsonplaceholder.typicode.com/comments", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({
-      postId: 1,
-      id: 1,
-      name: `${nome}`,
-      email: `${email}`,
-      body: `${msg}`,
-    }),
-  })
+  try {
+    
+    const email = document.getElementById("email").value;
+    const msg = document.getElementById("msg").value;
+    const nome = document.getElementById("nome").value;
+    if(!regexEmail.test(email)){
+      throw new Error('Email inválido')
+    }else if(msg.trim()==""||nome.trim()==""){
+      throw new Error('A mensagem e o nome não podem estar vazios.')
+    }
+    await fetch("https://jsonplaceholder.typicode.com/comments", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        postId: 1,
+        id: 1,
+        name: `${nome}`,
+        email: `${email}`,
+        body: `${msg}`,
+      }),
+    })
     .then((response) => {
       if (!response.ok) {
         throw new Error(`HTML response: ${response.status}`);
@@ -56,24 +67,26 @@ const postaComentario = async () => {
       let comentario = document.createElement("div");
       comentario.classList.add("card");
       comentario.innerHTML = `
+      <div class="comment-header">
+      <i class="fa-solid fa-user"></i>
         <h3>${data.name} - ${data.email}</h3>
-
+        </div>
         <p>${data.body}</p>
         `;
       document.getElementById("comments").appendChild(comentario);
       console.log(data);
     })
-    .catch((err) => {
-      console.log(err);
-    });
+  } catch (error) {
+    console.log(error);
+  }
 };
 
-const submitNews = document.getElementById('submitNews');
+const submitNews = document.getElementById("submitNews");
 
-submitNews.addEventListener('click', (event) => {
-  event.preventDefault()
+submitNews.addEventListener("click", (event) => {
+  event.preventDefault();
   alert(`Email cadastrado com sucesso!`);
-  document.getElementById('nameNews').value = ''
-  document.getElementById('emailNews').value = ''
-  document.getElementById('numberNews').value = ''
-})
+  document.getElementById("nameNews").value = "";
+  document.getElementById("emailNews").value = "";
+  document.getElementById("numberNews").value = "";
+});

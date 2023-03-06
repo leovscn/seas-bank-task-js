@@ -1,18 +1,33 @@
 {
-  "comments": [
+  "usuarios": [
     {
       "id": 1,
-      "body": "some comment",
-      "postId": 1
+      "nome": "Carolina Bastos",
+      "email": "carolina@teste.com.br",
+      "senha": "S3nh@daC@r0l!na",
+      "numeroDaConta": "1234567"
     },
-
     {
       "id": 2,
-      "body": "another comment",
-      "postId": 1
+      "nome": "Kellvin Correia",
+      "email": "kellvin@teste.com.br",
+      "senha": "S3nh@doK3llv!n",
+      "numeroDaConta": "8910111"
+    },
+    {
+      "id": 3,
+      "nome": "Leonardo Vasconcelos",
+      "email": "leonardo@teste.com.br",
+      "senha": "S3nh@doL3on@rd0",
+      "numeroDaConta": "2131415"
+    },
+    {
+      "id": 4,
+      "nome": "Usuário da API 2",
+      "email": "admin2@admin.com",
+      "senha": "senha123",
+      "numeroDaConta": "2131435"
     }
-  ],
-  "profile": {
-    "name": "leovscn"
-  }
+  ]
 }
+

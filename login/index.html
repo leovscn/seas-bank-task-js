@@ -15,6 +15,11 @@
     <!-- Seção para fonta (ainda decidir) -->
 
     <!-- Seção para fonta (ainda decidir) -->
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="../imgs/gull-bird-flying-shape-svgrepo-com.svg"
+    />
     <title>Seas Bank | Login</title>
   </head>
   <body>
@@ -30,18 +35,18 @@
           </div>
           <div class="inputs">
             <input
-              type="number"
+              type="email"
               name="number-account"
               inputmode="numeric"
-              id=""
+              id="loginUser"
               class="input-pattern account"
-              placeholder="Número da conta"
+              placeholder="Email"
             />
 
             <input
               type="password"
               name="password-account"
-              id=""
+              id="passwordUser"
               class="input-pattern password"
               placeholder="Senha"
             />
@@ -117,8 +122,8 @@
             </div>
           </div>
           <div class="buttons">
-            <button class="submit-btn btn-pattern">
-              <a href="../dashboard/index.html">Entrar</a>
+            <button class="submit-btn btn-pattern" onclick="validaLogin()">
+              Login
             </button>
 
             <button class="sign-in-btn btn-pattern">
@@ -132,5 +137,6 @@
         <img src="./imgs/3.png" alt="Homem mexendo no computador" />
       </div>
     </div>
+    <script src="../assets/js/valida-login.js"></script>
   </body>
 </html>

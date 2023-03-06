@@ -1,36 +1,7 @@
-const cep = document.querySelector("#cep");
-const showData = (result) => {
-  for (let campo in result) {
-    if (document.querySelector(`#${campo}`)) {
-      document.querySelector(`#${campo}`).value = result[campo];
-    }
-  }
-};
-async function buscaCep() {
-  let cepSemTraco = cep.value.replace(/\D/g, '');
-  const options = {
-    method: "GET",
-    mode: "cors",
-  };
-  try {
-    const viaCep = await fetch(
-      `https://viacep.com.br/ws/${cepSemTraco}/json/`,
-      options
-    );
-    if (viaCep.status !== 200) {
-      throw new Error(`HTML Error : ${viaCep.status}`);
-    }
-    const data = await viaCep.json();
-    showData(data);
-  } catch (error) {
-    console.error("Erro ao buscar o CEP:", error);
-  }
-}
 // COTAÇÕES
 
-const pegarCotacoes = async (select) => {
+async function pegarCotacoes(select) {
   document.querySelector("#cotacoes").innerHTML = "";
-
   await fetch(`https://economia.awesomeapi.com.br/last/${select}-BRL`, {
     method: "GET",
     headers: {
@@ -66,7 +37,8 @@ const pegarCotacoes = async (select) => {
     .catch((err) => {
       cotacoes.innerHTML = err;
     });
-};
+}
+pegarCotacoes("USD");
 
 async function listarUsuarios() {
   await fetch("https://jsonplaceholder.typicode.com/users", {
@@ -85,9 +57,11 @@ async function listarUsuarios() {
       users.forEach((user) => {
         document.getElementById(
           "users"
-        ).innerHTML += `<br> <p> <b style="color: black">Nome:</b> ${user.name}, <b style="color: black">Email:</b> ${user.email}, <b style="color: black">Cidade:</b> ${user.address.city} </p> <hr>`;
+        ).innerHTML += `<div class="card">  <p> <b style="color: black">Nome:</b> 
+        ${user.name},<br> <b style="color: black">Cidade:</b> 
+        ${user.address.city} <br><b style="color: black">Email:</b> 
+        ${user.email} </p></div>`;
       });
     });
 }
 listarUsuarios();
-

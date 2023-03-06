@@ -14,7 +14,9 @@
     <link rel="stylesheet" href="../assets/style.css" />
     <link rel="stylesheet" href="style.css" />
 
+
     <title>SeasBank</title>
+    <link rel="icon" type="image/x-icon" href="../imgs/gull-bird-flying-shape-svgrepo-com.svg">
   </head>
   <body>
     <header>
@@ -60,9 +62,10 @@
               melhores taxas de câmbio
             </p>
           </div>
-          <div class="contact-box">
-            <div class="contact-form">
-              <h3>Precisa de mais informações? Entre em contato conosco:</h3>
+          <h3 class="form-title">Precisa de mais informações? Entre em contato conosco:</h3>
+          <div class="comment-inputs comment-mobile">
+            <div class="form-comment">
+              
               <label for="nameContact">Seu nome:</label>
               <input
                 type="text"
@@ -80,13 +83,14 @@
                 required
               />
             </div>
-            <div class="contact-text">
-              <label for="commentText">Sua dúdiva ou sugestão:</label>
+            <div class="comment-text comment-mobile">
+              <label for="commentText">Sua dúvida ou sugestão:</label>
               <textarea
                 name="commentText"
                 id="commentText"
                 cols="30"
                 rows="10"
+                class="textarea-comment"
               ></textarea>
            
         </div>
@@ -94,6 +98,7 @@
       </section>
 
       <section class="third">
+        <div class="flex-row">
         <div class="cards conversao">
           <div class="selection">
             <h3>Pesquisar cotação por moeda:</h3>
@@ -106,18 +111,30 @@
               <option value="GBP">Libras</option>
               <option value="EUR">Euros</option>
               <option value="ARS">Peso argentino</option>
-            </select>
-          </div>
-          <div class="cards" id="cotacoes"></div>
+            </select> 
+          
+      </div><div class="cards" id="cotacoes"> 
+           
         </div>
+    </div>
+    <div class="li-benefits">
+      <ul><li>Vantagens exclusivas ao usar nosso cartão no exterior</li>
+      <li>Cluble de milhas e descontos</li>
+      <li>Quanto mais você usa, mais você ganha</li></ul>
+    </div>
+     </div>
+         
         <div class="formu usuarios">
           <h3>
             Converse com pessoas que utilizam nosso cartão ao redor do mundo!
           </h3>
-          <div id="users"></div>
+          <div id="users" class="users">
+
+          </div>
         </div>
       </section>
     </main>
+    
 
     <script src="../assets/js/script.js"></script>
   </body>

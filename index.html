@@ -13,6 +13,11 @@
     />
     <link rel="stylesheet" href="./assets/style.css" />
     <title>SeasBank</title>
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="./imgs/gull-bird-flying-shape-svgrepo-com.svg"
+    />
   </head>
   <body>
     <header>
@@ -37,7 +42,7 @@
         <button class="login-btn">
           <a href="./login/index.html">Faça login</a>
         </button>
-        <!-- <input type="submit" value="Faça parte" /> -->
+
       </nav>
     </header>
     <main>
@@ -108,7 +113,7 @@
 
         <div class="formu">
           <h2>Fique por dentro das novidades!</h2>
-          <form>
+          <form id="seasNews">
             <div class="nome">
               <label for="name">Informe seu nome:</label>
               <input
@@ -116,6 +121,7 @@
                 name=""
                 id="nameNews"
                 placeholder="Digite seu nome"
+                required
               />
             </div>
 
@@ -139,7 +145,7 @@
               />
             </div>
 
-            <input type="submit" id="submitNews" value="Inscreva-se!" />
+            <input type="submit" form="seasNews" id="submitNews" value="Inscreva-se!" />
           </form>
         </div>
       </section>
@@ -186,9 +192,9 @@
         </div>
       </section>
 
-      <section id="sobre" class="sobre cards">
+      <section id="sobre " class="sobre cards sobre-mobile">
         <h2>Comentários:</h2>
-        <div class="comment-inputs">
+        <div class="comment-inputs comment-mobile">
           <div class="form-comment">
             <label for="nome">Seu nome</label>
             <input
@@ -207,14 +213,14 @@
               required
             />
           </div>
-          <div class="comment-text">
+          <div class="comment-text comment-mobile">
             <label for="body">Comentário:</label>
             <textarea
               name="body"
               id="msg"
               placeholder="Deixe a sua opinião"
               required
-              maxlength="200"
+              maxlength="150"
               class="textarea-comment"
             ></textarea>
           </div>

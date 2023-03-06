@@ -32,6 +32,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 - CSS, Sass, Botstrap
 - Git e Github
 - Javascript
+- Json Server
 
 ## 💻 Projeto
 
@@ -48,7 +49,16 @@ O Seas possui ao todo 6 páginas:
 - DashBoard -> O dashboard é onde você controla as suas finanças com informações sobre seu saldo de conta, transferências, entradas e saídas.
 - Benefícios -> Essa página mostra as cotações sendo consideradas nas compras internacionais feitas pelo cartão Seas Bank e a lista de usuários que aprovaram o serviço
 - O consumo de API's se dá nas páginas : Benefícios (conversão e usuários), e Sign-up (Cep)
+
   > Confira nosso figma para mais informações: <a href="https://www.figma.com/file/TeE3EuxF2qeCYmfIl4IU5I/SeasBank?node-id=0%3A1&t=ixenGRYFPNTQMBFp-1" target="_blank"> -> Acesse nosso design!</a>
+
+## Como executar o projeto
+
+Estamos utilizando o JSON Server como API. Assim, para que o programa funcione como esperado é necessário seguir os seguintes passos:
+
+- Executar o comando no terminal dentro da pasta do projeto ```npm i -g json-server```
+- Em seguida, executar o comando ```json-server --watch db.json```
+- Abrir o projeto no navegador e executa-lo normalmente
 
 ## 🔘 Licença
 
