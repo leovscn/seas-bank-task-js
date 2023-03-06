@@ -81,12 +81,42 @@ const postaComentario = async () => {
   }
 };
 
+
 const submitNews = document.getElementById("submitNews");
 
 submitNews.addEventListener("click", (event) => {
-  event.preventDefault();
-  alert(`Email cadastrado com sucesso!`);
-  document.getElementById("nameNews").value = "";
-  document.getElementById("emailNews").value = "";
-  document.getElementById("numberNews").value = "";
+event.preventDefault();
+
+const nameInput = document.getElementById("nameNews");
+const emailInput = document.getElementById("emailNews");
+const numberInput = document.getElementById("numberNews");
+
+const emailRegex = /^[^\s@]+@[^\s@]+.[^\s@]+$/;
+const numberRegex = /^\d{10}$/;
+
+if (!nameInput.value) {
+alert("Por favor, preencha o campo de nome.");
+return;
+}
+if (!emailInput.value) {
+alert("Por favor, preencha o campo de e-mail.");
+return;
+}
+if (!emailRegex.test(emailInput.value)) {
+alert("Por favor, insira um e-mail válido.");
+return;
+}
+if (!numberInput.value) {
+alert("Por favor, preencha o campo de telefone.");
+return;
+}
+if (!numberRegex.test(numberInput.value)) {
+alert("Por favor, insira um número de telefone válido com 10 dígitos.");
+return;
+}
+
+alert('Email cadastrado com sucesso!');
+nameInput.value = "";
+emailInput.value = "";
+numberInput.value = "";
 });
