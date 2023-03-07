@@ -47,31 +47,18 @@ function validateFields() {
 }
 
 
-async function createUser() {
+function createUser() {
   let nameUser = document.getElementById('nameUser').value
   let emailUser = document.getElementById('emailUser').value
   let passwordUser = document.getElementById('passwordUser').value
 
-  await fetch("https://seas-bank-task-js.vercel.app/api/db.json", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-      "mode": "cors"
-    },
-    body: JSON.stringify({
-      nome: `${nameUser}`,
-      email: `${emailUser}`,
-      senha: `${passwordUser}`,
-    }),
-  })
-    .then((response) => {
-      if (!response.ok) {
-        throw new Error(`HTML Error: ${response.status}`);
-      }
-      return response.json();
-    })
-    .then((users) => {
-      console.log("ok");
-    })
-    
+  let users = JSON.parse(localStorage.getItem('users')) || [];
+
+  users.push({
+    nome: `${nameUser}`,
+    email: `${emailUser}`,
+    senha: `${passwordUser}`,
+  });
+
+  localStorage.setItem('users', JSON.stringify(users));
 }
