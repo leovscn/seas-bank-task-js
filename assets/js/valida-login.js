@@ -36,18 +36,19 @@ const getUserById = async (id) => {
   return users.find((user) => user.id === id) || null;
 };
 
-const validaLogin = async () => {
+async function validaLogin() {
   try {
     const loginUser = document.querySelector("#loginUser");
     const passwordUser = document.querySelector("#passwordUser");
 
-    const users = getLocalUsers();
-    console.log(users);
-
-    const user = users.find(
+    const apiUsers = await getUsers();
+    const localUsers = getLocalUsers();
+    
+    const user = apiUsers.find(
+      (user) => user.email === loginUser.value && user.senha === passwordUser.value
+    ) || localUsers.find(
       (user) => user.email === loginUser.value && user.senha === passwordUser.value
     );
-    console.log(user);
 
     if (user) {
       window.location.assign(`../dashboard/index.html?id=${user.id}`);
@@ -57,7 +58,7 @@ const validaLogin = async () => {
   } catch (error) {
     console.log(error);
   }
-};
+}
 
 const setUserName = async () => {
   try {
