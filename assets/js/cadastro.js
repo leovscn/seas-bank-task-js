@@ -52,7 +52,7 @@ async function createUser() {
   let emailUser = document.getElementById('emailUser').value
   let passwordUser = document.getElementById('passwordUser').value
 
-  await fetch("http://localhost:3000/usuarios", {
+  await fetch("https://seas-bank-task-js.vercel.app/api/db.json", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",

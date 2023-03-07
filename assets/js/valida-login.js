@@ -4,7 +4,7 @@ const validaLogin = async () => {
     const loginUser = document.querySelector("#loginUser");
     const passwordUser = document.querySelector("#passwordUser");
 
-    await fetch("http://localhost:3000/usuarios", {
+    await fetch("https://seas-bank-task-js.vercel.app/api/db.json", {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
@@ -43,7 +43,7 @@ async function setUserName() {
   let userId = urlParams.get("id");
   console.log(userId);
   try {
-    await fetch("http://localhost:3000/usuarios", {
+    await fetch("https://seas-bank-task-js.vercel.app/api/db.json", {
       method: "GET",
       headers: {
         "Content-Type": "application/json",

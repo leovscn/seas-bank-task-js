@@ -1,5 +1,12 @@
 {
-  "dependencies": {
+  "name": "seasbank",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "start": "",
+    "dev": "json-server --watch ./api/db.json"
+  },
+  "devDependencies": {
     "json-server": "^0.17.2"
   }
 }
