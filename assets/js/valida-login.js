@@ -2,7 +2,7 @@ const getUsers = async () => {
   try {
     const response = await fetch("https://seas-bank-task-js.vercel.app/api/db.json");
     if (!response.ok) {
-      throw new Error(`Erro HTTP: ${response.status}`);
+      throw new Error(`HTML Error: ${response.status}`);
     }
     const data = await response.json();
     return data.usuarios;
@@ -18,39 +18,58 @@ const getLocalUsers = () => {
 };
 
 const getUserById = async (id) => {
-  const users = await getUsers();
-  const user = users.find((user) => user.id === id);
-  if (user) {
-    return user;
+  try {
+    const response = await fetch("https://seas-bank-task-js.vercel.app/api/db.json");
+    if (!response.ok) {
+      throw new Error(`HTML Error: ${response.status}`);
+    }
+    const data = await response.json();
+    const user = data.usuarios.find((user) => user.id === id);
+    if (user) {
+      return user;
+    }
+  } catch (error) {
+    console.log(error);
   }
 
-  const localUsers = getLocalUsers();
-  return localUsers.find((user) => user.id === id);
+  const users = getLocalUsers();
+  return users.find((user) => user.id === id) || null;
 };
 
-const validaLogin = () => {
-  const loginUser = document.querySelector("#loginUser");
-  const passwordUser = document.querySelector("#passwordUser");
+const validaLogin = async () => {
+  try {
+    const loginUser = document.querySelector("#loginUser");
+    const passwordUser = document.querySelector("#passwordUser");
 
-  const users = getLocalUsers();
-  const user = users.find(
-    (user) => user.email === loginUser.value && user.senha === passwordUser.value
-  );
+    const users = getLocalUsers();
+    console.log(users);
 
-  if (user) {
-    window.location.assign(`../dashboard/index.html?id=${user.id}`);
-  } else {
-    alert("Dados incorretos");
+    const user = users.find(
+      (user) => user.email === loginUser.value && user.senha === passwordUser.value
+    );
+    console.log(user);
+
+    if (user) {
+      window.location.assign(`../dashboard/index.html?id=${user.id}`);
+    } else {
+      alert("Dados incorretos");
+    }
+  } catch (error) {
+    console.log(error);
   }
 };
 
 const setUserName = async () => {
-  const urlParams = new URLSearchParams(window.location.search);
-  const userId = urlParams.get("id");
+  try {
+    const urlParams = new URLSearchParams(window.location.search);
+    const userId = urlParams.get("id");
 
-  const user = await getUserById(userId);
-  if (user) {
-    document.getElementById("userName").innerHTML = user.nome;
+    const user = await getUserById(userId);
+    if (user) {
+      document.getElementById("userName").innerHTML = user.nome;
+    }
+  } catch (error) {
+    console.log(error);
   }
 };
 
