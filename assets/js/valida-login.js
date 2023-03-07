@@ -1,6 +1,8 @@
 const getUsers = async () => {
   try {
-    const response = await fetch("https://seas-bank-task-js.vercel.app/api/db.json");
+    const response = await fetch(
+      "https://seas-bank-task-js.vercel.app/api/db.json"
+    );
     if (!response.ok) {
       throw new Error(`HTML Error: ${response.status}`);
     }
@@ -19,7 +21,9 @@ const getLocalUsers = () => {
 
 const getUserById = async (id) => {
   try {
-    const response = await fetch("https://seas-bank-task-js.vercel.app/api/db.json");
+    const response = await fetch(
+      "https://seas-bank-task-js.vercel.app/api/db.json"
+    );
     if (!response.ok) {
       throw new Error(`HTML Error: ${response.status}`);
     }
@@ -43,15 +47,19 @@ async function validaLogin() {
 
     const apiUsers = await getUsers();
     const localUsers = getLocalUsers();
-    
-    const user = apiUsers.find(
-      (user) => user.email === loginUser.value && user.senha === passwordUser.value
-    ) || localUsers.find(
-      (user) => user.email === loginUser.value && user.senha === passwordUser.value
-    );
+
+    const user =
+      apiUsers.find(
+        (user) =>
+          user.email === loginUser.value && user.senha === passwordUser.value
+      ) ||
+      localUsers.find(
+        (user) =>
+          user.email === loginUser.value && user.senha === passwordUser.value
+      );
 
     if (user) {
-      window.location.assign(`../dashboard/index.html?id=${user.id}`);
+      window.location.assign(`../dashboard/index.html?id=${user.nome}`);
     } else {
       alert("Dados incorretos");
     }
@@ -59,15 +67,13 @@ async function validaLogin() {
     console.log(error);
   }
 }
-
-const setUserName = async () => {
+const setUserName = async (nome) => {
   try {
     const urlParams = new URLSearchParams(window.location.search);
     const userId = urlParams.get("id");
 
-    const user = await getUserById(userId);
-    if (user) {
-      document.getElementById("userName").innerHTML = user.nome;
+    if (userId) {
+      document.getElementById("userName").innerHTML = userId;
     }
   } catch (error) {
     console.log(error);
