@@ -18,7 +18,8 @@ const validaLogin = async () => {
       })
       .then((json) => {
         let userFound = false;
-        json.forEach((element) => {
+        Object.keys(json.usuarios).forEach((key) => {
+          const element = json.usuarios[key];
           if (
             element.email === loginUser.value &&
             element.senha === passwordUser.value
@@ -56,7 +57,8 @@ async function setUserName() {
         return res.json();
       })
       .then((json) => {
-        json.forEach((element) => {
+        Object.keys(json.usuarios).forEach((key) => {
+          const element = json.usuarios[key];
           if (userId == element.id) {
             document.getElementById("userName").innerHTML = element.nome;
           }
