@@ -2,7 +2,7 @@ const getUsers = async () => {
   try {
     const response = await fetch("https://seas-bank-task-js.vercel.app/api/db.json");
     if (!response.ok) {
-      throw new Error(`HTML Error: ${response.status}`);
+      throw new Error(`Erro HTTP: ${response.status}`);
     }
     const data = await response.json();
     return data.usuarios;
@@ -17,48 +17,34 @@ const getLocalUsers = () => {
   return localData ? JSON.parse(localData) : [];
 };
 
-async function getUserById(id) {
-  try {
-    const response = await fetch("https://seas-bank-task-js.vercel.app/api/db.json");
-    if (!response.ok) {
-      throw new Error(`HTML Error: ${response.status}`);
-    }
-    const data = await response.json();
-    const user = data.usuarios.find((user) => user.id === id);
-    if (user) {
-      return user;
-    }
-  } catch (error) {
-    console.log(error);
+const getUserById = async (id) => {
+  const users = await getUsers();
+  const user = users.find((user) => user.id === id);
+  if (user) {
+    return user;
   }
 
-  const users = JSON.parse(localStorage.getItem("users")) || [];
-  return users.find((user) => user.id === id);
-}
-async function validaLogin() {
-  let alertNotRepeat = false;
-  try {
-    const loginUser = document.querySelector("#loginUser");
-    const passwordUser = document.querySelector("#passwordUser");
+  const localUsers = getLocalUsers();
+  return localUsers.find((user) => user.id === id);
+};
 
-    const users = JSON.parse(localStorage.getItem("users")) || [];
-    const user = users.find(
-      (user) => user.email === loginUser.value && user.senha === passwordUser.value
-    );
+const validaLogin = () => {
+  const loginUser = document.querySelector("#loginUser");
+  const passwordUser = document.querySelector("#passwordUser");
 
-    if (user) {
-      alertNotRepeat = true;
-      window.location.assign(`../dashboard/index.html?id=${user.id}`);
-    } else {
-      alert("Dados incorretos");
-      alertNotRepeat = true;
-    }
-  } catch (error) {
-    console.log(error);
+  const users = getLocalUsers();
+  const user = users.find(
+    (user) => user.email === loginUser.value && user.senha === passwordUser.value
+  );
+
+  if (user) {
+    window.location.assign(`../dashboard/index.html?id=${user.id}`);
+  } else {
+    alert("Dados incorretos");
   }
-}
+};
 
-async function setUserName() {
+const setUserName = async () => {
   const urlParams = new URLSearchParams(window.location.search);
   const userId = urlParams.get("id");
 
@@ -66,6 +52,6 @@ async function setUserName() {
   if (user) {
     document.getElementById("userName").innerHTML = user.nome;
   }
-}
+};
 
 setUserName();
